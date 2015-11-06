@@ -19,7 +19,24 @@
        under the License.
 */
 
-// Coho updates this line:
-var VERSION = "4.0.0";
+var device = require('./device'),
+    args   = process.argv;
 
-console.log(VERSION);
+if(args.length > 2) {
+    var install_target;
+    if (args[2].substring(0, 9) == '--target=') {
+        install_target = args[2].substring(9, args[2].length);
+        device.install(install_target).done(null, function(err) {
+            console.error('ERROR: ' + err);
+            process.exit(2);
+        });
+     } else {
+        console.error('ERROR : argument \'' + args[2] + '\' not recognized.');
+        process.exit(2);
+     }
+} else {
+    device.install().done(null, function(err) {
+        console.error('ERROR: ' + err);
+        process.exit(2);
+    });
+}

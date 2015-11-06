@@ -19,7 +19,11 @@
        under the License.
 */
 
-// Coho updates this line:
-var VERSION = "4.0.0";
+var android_sdk_version = require('./lib/android_sdk_version');
 
-console.log(VERSION);
+android_sdk_version.run().done(null, function(err) {
+    console.log(err);
+    process.exit(2);
+});
+
+

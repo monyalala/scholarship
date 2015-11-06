@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 /*
        Licensed to the Apache Software Foundation (ASF) under one
        or more contributor license agreements.  See the NOTICE file
@@ -19,7 +17,15 @@
        under the License.
 */
 
-// Coho updates this line:
-var VERSION = "4.0.0";
+package org.apache.cordova;
 
-console.log(VERSION);
+import org.json.JSONException;
+
+/*
+ * Any exposed Javascript API MUST implement these three things!
+ */
+public interface ExposedJsApi {
+    public String exec(int bridgeSecret, String service, String action, String callbackId, String arguments) throws JSONException, IllegalAccessException;
+    public void setNativeToJsBridgeMode(int bridgeSecret, int value) throws IllegalAccessException;
+    public String retrieveJsMessages(int bridgeSecret, boolean fromOnlineEvent) throws IllegalAccessException;
+}
