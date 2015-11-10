@@ -7,17 +7,18 @@
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
   <link rel="stylesheet" type="text/css" href="css/index.css">
   <link href="css/libs/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+  <link href="css/site.css" rel="stylesheet" type="text/css"/>
   <script src="js/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
   <script src="js/libs/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
   <title>Scholarship</title>
  </head>
  <body>
-     <div data-role="page" id="page-home">
-         <div data-role="header" style="padding: 10px">
+     <div data-role="page" id="page-home" style="background: #fbfbfb;">
+         <div data-role="header" class="headerTitle">
              Home Page
          </div>
          <div data-role="ui-content" class="nav-glyphish-example" data-theme="b" >
-            <div data-role="navbar" class="nav-glyphish-example" data-grid="b" style="background-color:#3A7BD5">
+            <div data-role="navbar" class="nav-glyphish-example headerTab" data-grid="b">
                 <ul>
                     <li><a href="#" id="chat" data-icon="bullets">Scholarships</a></li>
                     <li><a href="#" id="email" data-icon="home">Universities</a></li>
@@ -26,7 +27,7 @@
             </div>
         </div>
      </div>
-  
+
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="js/core/app.js"></script>
   <script src="js/core/app_template.js" type="text/javascript"></script>
@@ -34,10 +35,6 @@
   <script src="js/libs/handlebars-v4.0.2.js" type="text/javascript"></script>
   <script type="text/javascript">
         App.onDeviceReady();
-//        $(document).on("mobileinit", function () {
-//          $.mobile.allowCrossDomainPages = true;
-//          $.support.cors = true;
-//        });
   </script>
  </body>
 </html>

@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,300,100);
+
+/* ---------------------------------------------- */
+/* Basic Startup */
+/* ---------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color:#fbfbfb;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+
+.headerTitle {
+    background: #215399;
+    padding: 10px;
+}
+.headerTab {
+    background: #3a7bd5;
+}
+.headerTitle, .headerTab > ul > li > a {
+    text-shadow: none;
+    color:#fff;
+    border-style: none;
+    font-weight: 400;
+}
+
+.headerTab > ul > li > a:hover {
+    text-shadow: none;
+    color:#ccc;
+}
