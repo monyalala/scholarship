@@ -1,0 +1,89 @@
+
+/* ---------------------------------------------- */
+/* Basic Startup */
+/* ---------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color:#fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/* ---------------------------------------------- */
+/* Header */
+/* ---------------------------------------------- */
+.container { background: #fbfbfb; }
+.headerTab { padding: 0 !important; }
+.headerTitle {
+    background: #215399;
+    padding: 50px;
+}
+.headerTitleLink {
+    text-shadow: none !important;
+    color: #FFFFFF;
+}
+
+
+.headerTitle,
+.headerNavLink {
+    text-shadow: none !important;
+    color: #fff !important;
+    border-style: none !important;
+    font-weight: 400;
+    background-color: none;
+}
+
+/* Tab Bar */
+.headerNav {
+    background: #3a7bd5;
+}
+.headerNavLink {
+    text-shadow: none !important;
+}
+
+
+.headerNavLink:hover,
+.headerNavLink:focus,
+.headerNavLink:visited,
+.headerNavLink:active {
+    color:#cccccc !important;
+    background: #215399 !important;
+    -webkit-box-shadow: 0 0 12px #215399 !important;
+    -moz-box-shadow: 0 0 12px #215399 !important;
+    box-shadow: 0 0 12px #215399 !important;
+}
+
+/* scholar list */
+.ui-listview li {
+    width: 100% !important;
+    margin-bottom: 10px !important;
+    float: left;
+    /*border: 1px solid darkred !important;*/
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+    background: white !important;
+    border-radius: 0px !important; 
+}
+.ui-listview li a {
+    background: white !important;
+}
+/**/

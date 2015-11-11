@@ -7,16 +7,16 @@ var ScholarshipModel = {
     $.ajax({
       type: "GET",
       datatype: "JSON",
-      url: "http://localhost:81/scholarship/index.php/major/major/getList",
+      url: "http://192.168.1.125:81/scholarship/index.php/mobile/major/getList",
       crossDomain: true,
       success: function (data) {
-          console.log (data);
-//        $.map(data.feed.entry, function (movie) {
+          console.log(data)
+//        $.map(data, function (scholar) {
 //          var jsonMovie = {
-//            "id": movie.gsx$id.$t,  
-//            "name": movie.gsx$name.$t,
-//            "description": movie.gsx$description.$t,
-//            "image": movie.gsx$image.$t
+//            "id": scholar.m_id 
+////            "name": scholar.gsx$name.$t,
+////            "description": scholar.gsx$description.$t,
+////            "image": scholar.gsx$image.$t
 //          };
 //          ScholarshipModel.scholarships.push(jsonMovie);
 //        });
