@@ -7,6 +7,7 @@ var App = {
   },
   onDeviceReady: function () {
     ScholarshipModel.fetch();
+    
   }
 };
 

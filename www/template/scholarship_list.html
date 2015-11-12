@@ -1,26 +1,9 @@
-<div data-role="header">
-    <h1>Scholarship List</h1>
-</div>
-<div data-role="content" style="">
-    <ul data-role="listview" data-inset="true" style="margin: 0px">
-        <li>
-            <a href="#">
-                <img src="img/beltie_logo.png">
-                <h2>Broken Bells</h2>
-                <p>Broken Bells</p>
-            </a>
-        </li>
-        <li><a href="#">
-                <img src="img/beltie_logo.png">
-                <h2>Warning</h2>
-                <p>Hot Chip</p>
-            </a>
-        </li>
-        <li><a href="#">
-                <img src="img/beltie_logo.png">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p>
-            </a>
-        </li>
-    </ul>
-</div>
+<ul data-role="listview" data-inset="true" style="margin: 0px">
+    {{#each scholar}}
+    <li><a href='#'>
+            <!--<img src="img/uc.jpg" height="100%">-->
+            <h2>{{m_name}}</h2>
+            <p>{{m_desc}}</p>
+        </a></li>
+    {{/each}}
+</ul>
