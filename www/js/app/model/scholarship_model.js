@@ -20,4 +20,20 @@ var ScholarshipModel = {
             }
         });
     }
+    ,
+    fetchById: function (id) {
+        $.ajax({
+            type: "GET",
+            datatype: "JSON",
+            url: "http://scholarship.ezytech.biz/index.php/mobile/major/getList/"+id,  
+            crossDomain: true,
+            success: function (data) {                
+                ScholarshipModel.scholarships = JSON.parse(data);                
+                ScholarshipView.renderListById();
+            },
+            error: function (error) {
+                console.log('error ; ', error);
+            }
+        });
+    }
 };

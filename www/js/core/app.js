@@ -6,8 +6,7 @@ var App = {
     document.addEventListener('deviceready', this.onDeviceReady, false);
   },
   onDeviceReady: function () {
-    ScholarshipModel.fetch();
-    
+    ScholarshipModel.fetch();    
   }
 };
 

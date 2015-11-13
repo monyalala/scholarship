@@ -1,70 +1,74 @@
-<!DOCTYPE html>
-<html> 
-    <head>
-        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">-->
-        <meta name="format-detection" content="telephone=no">
-        <!--<meta name="msapplication-tap-highlight" content="no">-->
-        <meta name="viewport"
-              content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link href="css/libs/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/site.css" rel="stylesheet" type="text/css"/>
-        <script src="js/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
-        <script src="js/libs/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
-        <title>Scholarship</title>
-    </head>
-    <body>
-        <div data-role="page" id="page-home" class="container">
-            <div data-role="header" class="headerTitle">
-                <a href="index.html" data-icon="delete" class="headerTitleLink"></a>
-                <h1>Edit Contact</h1>
-                <a href="index.html" data-icon="search" class="headerTitleLink"></a>
-            </div>
-            <div data-role="tabs" class="headerTab">
-                <div data-role="navbar" class="headerNav">
-                    <ul>
-                        <li><a href="#list-scholarships" data-ajax="false" data-icon="bullets" class="headerNavLink">Scholarships</a></li>
-                        <li><a href="#tabs-2" data-ajax="false" data-icon="home" class="headerNavLink">Universities</a></li>
-                        <li><a href="#tabs-3" data-ajax="false" data-icon="calendar" class="headerNavLink">Majors</a></li>
-                    </ul>
+    <!DOCTYPE html>
+    <html> 
+        <head>
+            <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">-->
+            <meta name="format-detection" content="telephone=no">
+            <!--<meta name="msapplication-tap-highlight" content="no">-->
+            <meta name="viewport"
+                  content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+            <link rel="stylesheet" type="text/css" href="css/index.css">
+            <link href="css/libs/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+            <link href="css/site.css" rel="stylesheet" type="text/css"/>
+            <script src="js/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
+            <script src="js/libs/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+            <title>Scholarship</title>
+        </head>
+        <body>
+            <div data-role="page" id="page-home" class="container">
+                <div data-role="header" class="headerTitle">
+                    <a href="index.html" data-icon="delete" class="headerTitleLink"></a>
+                    <h1>Edit Contact</h1>
+                    <a href="index.html" data-icon="search" class="headerTitleLink"></a>
                 </div>
-                <div id="list-scholarships" class="ui-content">
+                <div data-role="tabs" class="headerTab">
+                    <div data-role="navbar" class="headerNav">
+                        <ul>
+                            <li><a href="#list-scholarships" data-ajax="false" data-icon="bullets" class="headerNavLink">Scholarships</a></li>
+                            <li><a href="#tabs-2" data-ajax="false" data-icon="home" class="headerNavLink">Universities</a></li>
+                            <li id="major-list"><a href="#list-majors" data-ajax="false" data-icon="calendar" class="headerNavLink">Majors</a></li>
+                        </ul>
+                    </div>
+                    <div id="list-scholarships" class="ui-content">
 
-                </div>
-                <div id="tabs-2" class="ui-content">
-                    <h1>Second tab contents</h1>
-                </div>
-                <div id="tabs-3" class="ui-content">
-                    <h1>Third tab contents</h1>
-                </div>
-            </div>
-        </div>
-        <div data-role="page" id="page-scholarship-detail" class="container">
-            <div data-role="header" class="headerTitle">
-                <a href="index.html" data-icon="delete" class="headerTitleLink"></a>
-                <h1>Scholarship</h1>
-                <a href="index.html" data-icon="search" class="headerTitleLink"></a>
-            </div>
-            <div id="page-detail">Testing</div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/core/app.js"></script>
-        <script src="js/core/app_template.js" type="text/javascript"></script>
-        <script src="js/core/app_cache.js" type="text/javascript"></script>
-        <script src="js/libs/handlebars-v4.0.2.js" type="text/javascript"></script>
-        <script src="js/app/model/scholarship_model.js" type="text/javascript"></script>
-        <script src="js/app/controller/scholarship_controller.js" type="text/javascript"></script>
-        <script src="js/app/view/scholarship_view.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            App.onDeviceReady();
-            $(function () {
-                $("#tabs").tabs();
-            });
-            $(document).on("mobileinit", function () {
-                $.support.cors = true;
-                $.mobile.allowCrossDomainPages = true;
-            });
+                    </div>
+                    <div id="tabs-2" class="ui-content">
+                        <h1>Second tab contents</h1>
+                    </div>
+                    <div id="list-majors" class="ui-content">
 
-        </script>
-    </body>
-</html>
+                    </div>
+                </div>
+            </div>
+            <div data-role="page" id="page-scholarship-detail" class="container">
+                <div data-role="header" class="headerTitle">
+                    <a href="index.html" data-icon="delete" class="headerTitleLink"></a>
+                    <h1>Scholarship</h1>
+                    <a href="index.html" data-icon="search" class="headerTitleLink"></a>
+                </div>
+                <div id="page-detail">Testing</div>
+            </div>
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="js/core/app.js"></script>
+            <script src="js/core/app_template.js" type="text/javascript"></script>
+            <script src="js/core/app_cache.js" type="text/javascript"></script>
+            <script src="js/libs/handlebars-v4.0.2.js" type="text/javascript"></script>
+            <script src="js/app/model/scholarship_model.js" type="text/javascript"></script>
+            <script src="js/app/controller/scholarship_controller.js" type="text/javascript"></script>
+            <script src="js/app/view/scholarship_view.js" type="text/javascript"></script>
+            <script src="js/app/controller/major_controller.js" type="text/javascript"></script>
+            <script src="js/app/model/major_model.js" type="text/javascript"></script>
+            <script src="js/app/view/major_view.js" type="text/javascript"></script>
+            <script src="js/app/action/major.js" type="text/javascript"></script>
+            <script type="text/javascript">
+
+                App.onDeviceReady();
+                $(function () {
+                    $("#tabs").tabs();
+                });
+                $(document).on("mobileinit", function () {
+                    $.support.cors = true;
+                    $.mobile.allowCrossDomainPages = true;
+                });
+            </script>
+        </body>
+    </html>

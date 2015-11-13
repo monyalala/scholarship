@@ -87,3 +87,57 @@ body {
     background: white !important;
 }
 /**/
+
+/* ---------------------------------------------- */
+/* Major */
+/* ---------------------------------------------- */
+
+.major {
+    border: none !important;
+    border-radius: 0 !important;
+    background: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.major li {
+    background: #fbfbfb !important;
+    margin-bottom: 10px !important;
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    -webkit-box-shadow: 0 0 12px #b1b1b1 !important;
+    -moz-box-shadow: 0 0 12px #b1b1b1 !important;
+    box-shadow: 0 0 12px #b1b1b1 !important;
+}
+
+.major li a {
+    padding: 0;
+    border: none !important;
+}
+
+.major.majorIcon {
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    background: #2bb5c4 !important;
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 15px;
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    padding: 8px 0;
+    font-weight: lighter;
+}
+
+.major li a h2 {
+    color: #6b7279;
+    font-weight: lighter;
+}
+
+.major li a p {
+    color: #b1b6bc;
+    font-weight: lighter;
+    text-transform: none;
+}
