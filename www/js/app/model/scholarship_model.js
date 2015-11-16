@@ -1,15 +1,17 @@
 var ScholarshipModel = {
     scholarships: [],
+    scholarship:[],
     getScholarships: function () {
         return ScholarshipModel.scholarships;
+    },
+    getScholarship: function () {
+        return ScholarshipModel.scholarship;
     },
     fetch: function () {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-//            url: "http://192.168.1.125:81/scholarship/index.php/mobile/major/getList",
-//                url: "http://192.168.54.67:81/scholarship/index.php/mobile/major/getList",
-            url: "http://scholarship.ezytech.biz/index.php/mobile/major/getList",  
+            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getList",  
             crossDomain: true,
             success: function (data) {                
                 ScholarshipModel.scholarships = JSON.parse(data);                
@@ -25,11 +27,12 @@ var ScholarshipModel = {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-            url: "http://scholarship.ezytech.biz/index.php/mobile/major/getList/"+id,  
+//            url: "http://scholarship.ezytech.biz/index.php/mobile/major/getList/"+id,  
+            url: "http://localhost:81/scholarship/index.php/mobile/scholarship/getList/"+id,
             crossDomain: true,
             success: function (data) {                
-                ScholarshipModel.scholarships = JSON.parse(data);                
-                ScholarshipView.renderListById();
+                ScholarshipModel.scholarship = JSON.parse(data);                
+                ScholarshipView.renderDetail();
             },
             error: function (error) {
                 console.log('error ; ', error);

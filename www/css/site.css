@@ -74,18 +74,18 @@ body {
 }
 
 /* scholar list */
-.ui-listview li {
+/*.ui-listview li {
     width: 100% !important;
     margin-bottom: 10px !important;
     float: left;
-    /*border: 1px solid darkred !important;*/
+    border: 1px solid darkred !important;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
     background: white !important;
     border-radius: 0px !important; 
 }
 .ui-listview li a {
     background: white !important;
-}
+}*/
 /**/
 
 /* ---------------------------------------------- */

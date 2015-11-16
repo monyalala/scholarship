@@ -1,8 +1,13 @@
-<ul data-role="listview" data-inset="true" style="margin: 0px">
+<ul data-role="listview" data-inset="true" style="margin: 0px" id="scholarship-listview" class="major">
     {{#each scholar}}
-    <li data-id="{{m_id}}"><a href='#page-scholarship-detail'>
-            <h2>{{m_name}}</h2>
-            <p>{{m_desc}}</p>
+    <li onclick="ScholarshipModel.fetchById({{sch_id}})">
+        <a href='#page-scholarship-detail' data-transition="slide">
+            <div class="major majorIcon" style="">
+                
+            </div>
+            <h2>{{sch_name}}</h2>
+            <p>{{uni_name}}</p>
+            <p style="color: brown">{{m_name}}</p>            
         </a></li>
     {{/each}}
 </ul>

@@ -23,29 +23,26 @@
                 <div data-role="tabs" class="headerTab">
                     <div data-role="navbar" class="headerNav">
                         <ul>
-                            <li><a href="#list-scholarships" data-ajax="false" data-icon="bullets" class="headerNavLink">Scholarships</a></li>
-                            <li><a href="#tabs-2" data-ajax="false" data-icon="home" class="headerNavLink">Universities</a></li>
-                            <li id="major-list"><a href="#list-majors" data-ajax="false" data-icon="calendar" class="headerNavLink">Majors</a></li>
+                            <li><a data-transition="slide" href="#list-scholarships" data-ajax="false" data-icon="bullets" class="headerNavLink" >Scholarships</a></li>
+                            <li><a data-transition="slide" href="#tabs-2" data-ajax="false" data-icon="home" class="headerNavLink">Universities</a></li>
+                            <li id="major-list"><a data-transition="slide" href="#list-majors" data-ajax="false" data-icon="calendar" class="headerNavLink">Majors</a></li>
                         </ul>
                     </div>
-                    <div id="list-scholarships" class="ui-content">
+                    <div id="list-scholarships" class="ui-content" data-transition="slide">
 
                     </div>
-                    <div id="tabs-2" class="ui-content">
+                    <div id="tabs-2" class="ui-content" data-transition="slide">
                         <h1>Second tab contents</h1>
                     </div>
-                    <div id="list-majors" class="ui-content">
+                    <div id="list-majors" class="ui-content" data-transition="slide">
 
                     </div>
+                
+            </div>
                 </div>
             </div>
             <div data-role="page" id="page-scholarship-detail" class="container">
-                <div data-role="header" class="headerTitle">
-                    <a href="index.html" data-icon="delete" class="headerTitleLink"></a>
-                    <h1>Scholarship</h1>
-                    <a href="index.html" data-icon="search" class="headerTitleLink"></a>
-                </div>
-                <div id="page-detail">Testing</div>
+                
             </div>
             <script type="text/javascript" src="cordova.js"></script>
             <script type="text/javascript" src="js/core/app.js"></script>
@@ -59,6 +56,7 @@
             <script src="js/app/model/major_model.js" type="text/javascript"></script>
             <script src="js/app/view/major_view.js" type="text/javascript"></script>
             <script src="js/app/action/major.js" type="text/javascript"></script>
+            <script src="js/app/action/scholarship.js" type="text/javascript"></script>
             <script type="text/javascript">
 
                 App.onDeviceReady();

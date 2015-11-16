@@ -7,4 +7,7 @@ var ScholarshipController = {
 //      ScholarshipView.renderList($element, scholar);
 //    });
 //  }
+getOne: function(id){
+    ScholarshipModel.fetchById(id);
+}
 };
