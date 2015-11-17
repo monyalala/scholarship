@@ -11,7 +11,8 @@ var ScholarshipModel = {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getList",  
+            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getList", 
+//            url: "http://localhost:81/scholarship/index.php/mobile/scholarship/getList", 
             crossDomain: true,
             success: function (data) {                
                 ScholarshipModel.scholarships = JSON.parse(data);                
@@ -27,8 +28,8 @@ var ScholarshipModel = {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-//            url: "http://scholarship.ezytech.biz/index.php/mobile/major/getList/"+id,  
-            url: "http://localhost:81/scholarship/index.php/mobile/scholarship/getList/"+id,
+            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getList/"+id, 
+//            url: "http://localhost:81/scholarship/index.php/mobile/scholarship/getList/"+id,
             crossDomain: true,
             success: function (data) {                
                 ScholarshipModel.scholarship = JSON.parse(data);                
