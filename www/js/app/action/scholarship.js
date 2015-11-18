@@ -10,10 +10,10 @@ $(function () {
 //        ScholarshipModel.fetchById(id);
 //    });
 });
-function getId(element){
-    console.log("element : ", $(element).attr("data-id"));
-    var id = $(element).attr("data-id");
-    ScholarshipModel.fetchById(id);
-}
+//function getId(element){
+//    console.log("element : ", $(element).attr("data-id"));
+//    var id = $(element).attr("data-id");
+//    ScholarshipModel.fetchById(id);
+//}
 
 

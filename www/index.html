@@ -4,8 +4,7 @@
         <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">-->
         <meta name="format-detection" content="telephone=no">
         <!--<meta name="msapplication-tap-highlight" content="no">-->
-        <meta name="viewport"
-              content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link href="css/card.css" rel="stylesheet" type="text/css"/>
         <link href="css/libs/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
@@ -41,41 +40,43 @@
 
             </div>
         </div>
-    <div data-role="page" id="page-scholarship-detail" class="container">
+        <div data-role="page" id="page-scholarship-detail" class="container">
 
-    </div>
+        </div>
         <script type="text/javascript">
-            $(window).load(function(){
-                initialize()
+            $(window).load(function () {
+                initialize();
             });
         </script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false">
-    </script>
-    <script src="js/libs/map.js" type="text/javascript"></script>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/core/app.js"></script>
-    <script src="js/core/app_template.js" type="text/javascript"></script>
-    <script src="js/core/app_cache.js" type="text/javascript"></script>
-    <script src="js/libs/handlebars-v4.0.2.js" type="text/javascript"></script>
-    <script src="js/app/model/scholarship_model.js" type="text/javascript"></script>
-    <script src="js/app/controller/scholarship_controller.js" type="text/javascript"></script>
-    <script src="js/app/view/scholarship_view.js" type="text/javascript"></script>
-    <script src="js/app/controller/major_controller.js" type="text/javascript"></script>
-    <script src="js/app/model/major_model.js" type="text/javascript"></script>
-    <script src="js/app/view/major_view.js" type="text/javascript"></script>
-    <script src="js/app/action/major.js" type="text/javascript"></script>
-    <script src="js/app/action/scholarship.js" type="text/javascript"></script>
-
-    <script type="text/javascript">
-        App.onDeviceReady();
-        $(function () {
-            $("#tabs").tabs();
-        });
-        $(document).on("mobileinit", function () {
-            $.support.cors = true;
-            $.mobile.allowCrossDomainPages = true;
-        });
-    </script>
-</body>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false">
+        </script>
+        <script src="js/libs/map.js" type="text/javascript"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/core/app.js"></script>
+        <script src="js/core/app_template.js" type="text/javascript"></script>
+        <script src="js/core/app_cache.js" type="text/javascript"></script>
+        <script src="js/libs/handlebars-v4.0.2.js" type="text/javascript"></script>
+        <script src="js/app/model/scholarship_model.js" type="text/javascript"></script>
+        <script src="js/app/controller/scholarship_controller.js" type="text/javascript"></script>
+        <script src="js/app/view/scholarship_view.js" type="text/javascript"></script>
+        <script src="js/app/controller/major_controller.js" type="text/javascript"></script>
+        <script src="js/app/model/major_model.js" type="text/javascript"></script>
+        <script src="js/app/view/major_view.js" type="text/javascript"></script>
+        <script src="js/app/action/major.js" type="text/javascript"></script>
+        <script src="js/app/action/scholarship.js" type="text/javascript"></script>
+        <script src="js/app/view/requirement_view.js" type="text/javascript"></script>
+        <script src="js/app/model/requirement_model.js" type="text/javascript"></script>
+        <script src="js/app/model/scholarship_detail_model.js" type="text/javascript"></script>
+        <script src="js/app/view/scholarshipdetail_view.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            App.onDeviceReady();
+            $(function () {
+                $("#tabs").tabs();
+            });
+            $(document).on("mobileinit", function () {
+                $.support.cors = true;
+                $.mobile.allowCrossDomainPages = true;
+            });
+        </script>
+    </body>
 </html>
