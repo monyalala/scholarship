@@ -32,11 +32,11 @@ body {
 /* ---------------------------------------------- */
 /* Header */
 /* ---------------------------------------------- */
-.container { background: #fbfbfb; }
+.container { background: #fbfbfb;}
 .headerTab { padding: 0 !important; }
 .headerTitle {
     background: #215399;
-    padding: 50px;
+    padding: 50px;    
 }
 .headerTitleLink {
     text-shadow: none !important;

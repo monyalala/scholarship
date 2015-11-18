@@ -24,16 +24,18 @@ var ScholarshipModel = {
         });
     }
     ,
-    fetchById: function (id) {
+    fetchById: function (id,uni_id) {
         $.ajax({
             type: "GET",
             datatype: "JSON",
             url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getList/"+id, 
-//            url: "http://localhost:81/scholarship/index.php/mobile/scholarship/getList/"+id,
             crossDomain: true,
             success: function (data) {                
                 ScholarshipModel.scholarship = JSON.parse(data);                
                 ScholarshipView.renderDetail();
+                RequirementModel.fetchBySchId(id);
+                ScholarshipDetailModel.fetchBySchId(id);
+                ContactModel.fetchByUniIdForSch(1);
             },
             error: function (error) {
                 console.log('error ; ', error);
