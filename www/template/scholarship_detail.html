@@ -1,89 +1,70 @@
 {{#each scholar}}
-<div data-role="header" class="headerTitle" style="position: fixed;z-index:1;width: 100%">    
+<!--<div data-role="header" class="headerTitle" style="position: fixed;z-index:1;width: 100%">--> 
+<div data-role="header" class="headerTitle" style="">
     <a href="index.html" data-icon="delete" class="headerTitleLink"></a>
     <h1>{{sch_name}}</h1>
     <a href="index.html" data-icon="search" class="headerTitleLink"></a>
 </div>
 <!--<div class="card" style="position: absolute;top:145px">-->
-<div class="card">
-    <div style="padding:5px;float:left"><img src="http://scholarship.ezytech.biz/{{uni_logo_path}}" width="50px"></div>
-    <p style="font-size:16px;line-height: 1.25em;">{{sch_name}}</p>
-    <p style="font-size:12px;line-height: 1.25em;margin-top:-10px;color: brown">{{uni_name}} ({{m_name}})</p>
-    <div class="card-image">
-        <div id="map-page" data-url="map-page" >
-            <div role="main" class="ui-content" id="map-canvas" style="width: 100%; height: 450px;">                
-          
-            </div>
-        </div>
-        <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.905183401383!2d104.8686647143423!3d11.558654647429234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951b8486eb709%3A0x36ceffa00cb4ff9d!2sUniversity+of+Cambodia!5e0!3m2!1sen!2skh!4v1447646958223" width="1000" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
-    </div>    
-    <!--Scholarship Info-->
-    <div style="padding: 5px;margin-top:5px;font-size: 16px">Scholarship Info</div>
-    <div style="padding: 10px">
-        <table class="ui-responsive table-stroke" data-role="table" data-mode="" style="font-size:12px;">     
-            <tbody>
-                <tr>
-                    <td style="width:120px">University</td>
-                    <td>{{uni_name}}</td>
-                </tr> 
-                <tr>
-                    <td style="width:120px">Major</td>
-                    <td>{{m_name}}</td>
-                </tr>
-                <tr id="amount-scholarship"></tr>
-                <tr>
-                    <td>More Info</td>
-                    <td>{{sch_desc}}</td>
-                </tr>            
-            </tbody>
-        </table>    
-    </div>
-    <!--Testing Info-->
-    <div style="padding: 5px;margin-top:5px;font-size: 16px">Exam Info</div>
-    <div style="padding: 10px">
-        <table class="ui-responsive table-stroke" data-role="table" data-mode="" style="font-size:12px;">     
-            <tbody>
-                <tr>
-                    <td style="width:120px">End Register</td>
-                    <td>{{sch_expired_date}}</td>
-                </tr>
-                <tr>
-                    <td style="width:120px">Exam Date</td>
-                    <td>{{sch_exam_date}}</td>
-                </tr>
-                <tr>
-                    <td>Exam Place</td>
-                    <td>{{sch_exam_place}}</td>
-                </tr>            
-            </tbody>
-        </table>    
-    </div>
-    <!--Requirement Info-->
-    <div id="list-requirements"></div>
-    <!--Contact Info -->
-    <div style="padding: 5px;margin-top:5px;font-size: 16px">Contact Info</div>
-    <div style="padding: 10px">
-        <table class="ui-responsive table-stroke" data-role="table" data-mode="" style="font-size:12px;">     
-            <tbody>
-                <tr>
-                    <td style="width:120px">Address</td>
-                    <td></td>
-                </tr> 
-                <tr>
-                    <td style="width:120px">Phone</td>
-                    <td>+85590909090,9090909</td>
-                </tr>
-                <tr>
-                    <td style="width:120px">Email</td>
-                    <td>hello@c.com</td>
-                </tr>
-                <tr>
-                    <td>Website</td>
-                    <td>www.hwllo.com</td>
-                </tr>            
-            </tbody>
-        </table>    
-    </div>
-</div>
+<div>
+    <div class="card">
+        <div style="padding:5px;float:left"><img src="http://scholarship.ezytech.biz/{{uni_logo_path}}" width="50px"></div>
+        <p style="font-size:16px;line-height: 1.25em;">{{sch_name}}</p>
+        <p style="font-size:12px;line-height: 1.25em;margin-top:-10px;color: brown">{{uni_name}} ({{m_name}})</p>
+        <div class="card-image">
+            <div id="map-page" data-url="map-page" >
+                <div role="main" class="ui-content" id="map-canvas" style="width: 100%; height: 450px;">                
 
+                </div>
+            </div>
+            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.905183401383!2d104.8686647143423!3d11.558654647429234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951b8486eb709%3A0x36ceffa00cb4ff9d!2sUniversity+of+Cambodia!5e0!3m2!1sen!2skh!4v1447646958223" width="1000" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+        </div>    
+        <!--Scholarship Info-->
+        <div style="padding: 5px;margin-top:5px;font-size: 16px">ពត៌មានអាហារូបករណ៍</div>
+        <div style="padding: 10px">
+            <table class="ui-responsive table-stroke" data-role="table" data-mode="" style="font-size:12px;">     
+                <tbody>
+                    <tr>
+                        <td style="width:120px">សាកលវិទ្យាល័យ</td>
+                        <td>{{uni_name}}</td>
+                    </tr> 
+                    <tr>
+                        <td style="width:120px">ជំនាញ</td>
+                        <td>{{m_name}}</td>
+                    </tr>
+                    <tr id="amount-scholarship"></tr>
+                    <tr>
+                        <td>បន្ថែម</td>
+                        <td>{{sch_desc}}</td>
+                    </tr>            
+                </tbody>
+            </table>    
+        </div>
+        <!--Testing Info-->
+        <div style="padding: 5px;margin-top:5px;font-size: 16px">ពត៌មានប្រលង</div>
+        <div style="padding: 10px">
+            <table class="ui-responsive table-stroke" data-role="table" data-mode="" style="font-size:12px;">     
+                <tbody>
+                    <tr>
+                        <td style="width:120px">ថ្ងៃឈប់ទទួលពាក្យ</td>
+                        <td>{{sch_expired_date}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width:120px">កាលបរិច្ឆេទប្រលង</td>
+                        <td>{{sch_exam_date}}</td>
+                    </tr>
+                    <tr>
+                        <td>ទីតាំងប្រលង</td>
+                        <td>{{sch_exam_place}}</td>
+                    </tr>            
+                </tbody>
+            </table>    
+        </div>
+        <!--Requirement Info-->
+        <div id="list-requirements"></div>
+        <!--Contact Info -->
+        <div id="list-contacts"></div>
+    </div>
+
+</div>
 {{/each}}

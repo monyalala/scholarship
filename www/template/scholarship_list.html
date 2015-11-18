@@ -1,6 +1,6 @@
 <ul data-role="listview" data-inset="true" style="margin: 0px" id="scholarship-listview" class="major">
     {{#each scholar}}
-    <li onclick="ScholarshipModel.fetchById({{sch_id}})">
+    <li onclick="ScholarshipModel.fetchById({{sch_id}},{{uni_id}})">
         <a href='#page-scholarship-detail' data-transition="slide">
             <div class="major majorIcon" style="">
                 

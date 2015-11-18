@@ -24,7 +24,7 @@ var ScholarshipModel = {
         });
     }
     ,
-    fetchById: function (id) {
+    fetchById: function (id,uni_id) {
         $.ajax({
             type: "GET",
             datatype: "JSON",
@@ -35,6 +35,7 @@ var ScholarshipModel = {
                 ScholarshipView.renderDetail();
                 RequirementModel.fetchBySchId(id);
                 ScholarshipDetailModel.fetchBySchId(id);
+                ContactModel.fetchByUniIdForSch(1);
             },
             error: function (error) {
                 console.log('error ; ', error);
