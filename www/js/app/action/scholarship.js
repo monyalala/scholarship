@@ -19,6 +19,7 @@ $(function () {
 $(function () {
     $("#scholarship-tab").on("click", function () {
         $("#header-title").text("អាហារូបករណ៍");
+        $('.search-class').attr('id','search-sch');
     });
     $(document).delegate($("#list-scholarships"), "click", function () {
         ScholarshipModel.fetch();
