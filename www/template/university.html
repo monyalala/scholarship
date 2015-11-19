@@ -1,26 +1,16 @@
-<!--<div role="main" class="ui-content">
-    <ul data-role="listview" data-inset="true">
-        {{#each university}}
-        <li><a href="#">
-                <img src="http://scholarship.ezytech.biz/{{uni_img_path}}" class="ui-li-thumb"/>
-                <h2>{{uni_name}}</h2>
-                <p>Apple released iOS 6.1</p>
-                <p class="ui-li-aside">iOS</p>
-            </a></li>
-        {{/each}}
-    </ul>
-</div>-->
 <div class="my-page" data-url="demo-page">
     <div role="main" class="ui-content">
-        {{#each university}}
+        
         <ul data-role="listview" data-inset="true">
+            {{#each university}}
             <li><a href="#">
-                <img src="http://scholarship.ezytech.biz/{{uni_img_path}}" class="ui-li-thumb">
+                    <img src="http://scholarship.ezytech.biz/{{uni_img_path}}" style="height: 100%" class="ui-li-thumb">
                 <h2>{{uni_name}}</h2>
                 <p>Apple released iOS 6.1</p>
                 <p class="ui-li-aside">iOS</p>
             </a></li>
+            {{/each}}
         </ul>
-        {{/each}}
-    </div><!-- /content -->
+        
+    </div>
 </div>
