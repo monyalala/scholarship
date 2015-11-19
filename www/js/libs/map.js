@@ -1,5 +1,5 @@
 $( document ).on( "pagecreate", "#page-scholarship-detail", function() {
-    var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
+    var defaultLatLng = new google.maps.LatLng(11.576339, 104.923168);  // Default to Hollywood, CA when no geolocation support
     if ( navigator.geolocation ) {
         function success(pos) {
             // Location found, show map with these coordinates
@@ -15,7 +15,7 @@ $( document ).on( "pagecreate", "#page-scholarship-detail", function() {
     }
     function drawMap(latlng) {
         var myOptions = {
-            zoom: 10,
+            zoom: 15,
             center: latlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
