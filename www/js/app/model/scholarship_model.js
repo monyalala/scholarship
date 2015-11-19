@@ -1,11 +1,15 @@
 var ScholarshipModel = {
     scholarships: [],
     scholarship:[],
+    schByUni:[],
     getScholarships: function () {
         return ScholarshipModel.scholarships;
     },
     getScholarship: function () {
         return ScholarshipModel.scholarship;
+    },
+    getSchByUni: function () {
+        return ScholarshipModel.schByUni;
     },
     fetch: function () {
         $.ajax({
@@ -36,6 +40,21 @@ var ScholarshipModel = {
                 RequirementModel.fetchBySchId(id);
                 ScholarshipDetailModel.fetchBySchId(id);
                 ContactModel.fetchByUniIdForSch(1);
+            },
+            error: function (error) {
+                console.log('error ; ', error);
+            }
+        });
+    },
+    fetchByUniId: function (uni_id) {
+        $.ajax({
+            type: "GET",
+            datatype: "JSON",
+            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getListByUni/"+uni_id, 
+            crossDomain: true,
+            success: function (data) {                
+                ScholarshipModel.schByUni = JSON.parse(data);                
+                ScholarshipView.renderList();
             },
             error: function (error) {
                 console.log('error ; ', error);
