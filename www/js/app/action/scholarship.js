@@ -16,4 +16,15 @@ $(function () {
 //    ScholarshipModel.fetchById(id);
 //}
 
+$(function(){
+    $("#scholarship-tab").on("click",function(){
+        $("#header-title").text("អាហារូបករណ៍");
+    });
+    $(document).delegate($("#list-scholarships"), "click", function () {
+        ScholarshipModel.fetch();
+    });
+    
+});
+    
+
 
