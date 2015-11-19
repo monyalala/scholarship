@@ -36,7 +36,7 @@ body {
 .headerTab { padding: 0 !important; }
 .headerTitle {
     background: #215399;
-    padding: 5px;    
+    padding: 0px;    
 }
 .headerTitleLink {
     text-shadow: none !important;
@@ -56,11 +56,18 @@ body {
 /* Tab Bar */
 .headerNav {
     background: #3a7bd5;
+/*    position: fixed;
+    width: 100%;
+    z-index: 1*/
 }
 .headerNavLink {
     text-shadow: none !important;
 }
-
+/*.nav-content {
+    position: absolute;
+    top:60px;
+    width: 100%;
+}*/
 
 .headerNavLink:hover,
 .headerNavLink:focus,
@@ -72,21 +79,6 @@ body {
     -moz-box-shadow: 0 0 12px #215399 !important;
     box-shadow: 0 0 12px #215399 !important;
 }
-
-/* scholar list */
-/*.ui-listview li {
-    width: 100% !important;
-    margin-bottom: 10px !important;
-    float: left;
-    border: 1px solid darkred !important;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
-    background: white !important;
-    border-radius: 0px !important; 
-}
-.ui-listview li a {
-    background: white !important;
-}*/
-/**/
 
 /* ---------------------------------------------- */
 /* Major */

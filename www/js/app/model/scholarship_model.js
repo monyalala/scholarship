@@ -39,7 +39,7 @@ var ScholarshipModel = {
                 ScholarshipView.renderDetail();
                 RequirementModel.fetchBySchId(id);
                 ScholarshipDetailModel.fetchBySchId(id);
-                ContactModel.fetchByUniIdForSch(1);
+                ContactModel.fetchByUniIdForSch(uni_id);
             },
             error: function (error) {
                 console.log('error ; ', error);
