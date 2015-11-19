@@ -17,16 +17,15 @@
     <body>
         <div data-role="page" id="page-home" class="container">
             <div data-role="header" class="headerTitle">
-                <a href="index.html" data-icon="delete" class="headerTitleLink"></a>
-                <h1>Edit Contact</h1>
-                <a href="index.html" data-icon="search" class="headerTitleLink"></a>
+                <a href="index.html" data-icon="back" class="headerTitleLink"></a>
+                <h1 id="header-title">សាកលវិទ្យាល័យ</h1>
             </div>
             <div data-role="tabs" class="headerTab">
                 <div data-role="navbar" class="headerNav">
-                    <ul>
-                        <li><a data-transition="slide" href="#list-scholarships" data-ajax="false" data-icon="bullets" class="headerNavLink" >Scholarships</a></li>
-                        <li><a data-transition="slide" href="#tabs-2" data-ajax="false" data-icon="home" class="headerNavLink">Universities</a></li>
-                        <li id="major-list"><a data-transition="slide" href="#list-majors" data-ajax="false" data-icon="calendar" class="headerNavLink">Majors</a></li>
+                    <ul>                        
+                        <li><a href="#tabs-2" data-ajax="false" data-icon="home" class="headerNavLink">សាកលវិទ្យាល័យ</a></li>
+                        <li id="major-list"><a href="#list-majors" data-ajax="false" data-icon="calendar" class="headerNavLink">ជំនាញ</a></li>
+                        <li id="scholarship-tab"><a href="#list-scholarships" data-ajax="false" data-icon="bullets" class="headerNavLink" >អាហារូបករណ៍</a></li>
                     </ul>
                 </div>
                 <div id="list-scholarships" class="ui-content" data-transition="slide">
@@ -79,7 +78,7 @@
             $(document).on("mobileinit", function () {
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;
-            });
+            });            
         </script>
     </body>
 </html>
