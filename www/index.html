@@ -16,6 +16,11 @@
         <title>Scholarship</title>
     </head>
     <body>
+<!--        <div data-role="page" data-theme="b" id="splash" style="background-color: #fff;"> 
+            <div class="splash">
+                <img src="http://jquerymobile.com/demos/1.0a4.1/docs/_assets/images/jquery-logo.png" alt="splash" />
+            </div>
+        </div>-->
         <div data-role="page" id="page-home" class="container">
             <div data-role="header" class="headerTitle" data-position="fixed">
                 <!--<a id="search-button" href="#" class="ui-btn-right ui-btn ui-icon-search ui-btn-icon-notext ui-shadow ui-corner-all" style="margin-top: 5px">Search</a>-->
@@ -30,7 +35,7 @@
                         <li id="scholarship-tab"><a href="#list-scholarships" data-ajax="false" data-icon="bullets" class="headerNavLink" >អាហារូបករណ៍</a></li>
                     </ul>
                 </div>
-                
+
                 <div id="list-university" class="ui-content nav-content"></div>
                 <div id="list-majors" class="ui-content nav-content"></div>
                 <div id="list-scholarships" class="ui-content nav-content"></div>
@@ -78,7 +83,7 @@
             $(document).on("mobileinit", function () {
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;
-            }); 
+            });
 //            $("#page-home").on("pagebeforeshow",function(){
 //                $("#search-container").hide();
 //            });
@@ -90,7 +95,13 @@
 //                }
 //                
 //            });
-            
+//            $(function () {
+//                setTimeout(hideSplash, 2000);
+//            });
+//
+//            function hideSplash() {
+//                $.mobile.changePage("#page-home", "fade");
+//            }
         </script>
     </body>
 </html>
