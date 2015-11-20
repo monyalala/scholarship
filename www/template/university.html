@@ -3,11 +3,11 @@
         
         <ul data-role="listview" data-inset="true" data-filter="true" data-input="#search-university">
             {{#each university}}
-            <li><a href="#">
+            <li onclick="UniversityModel.fetchById({{uni_id}})"><a href="#page-university-detail">
                     <img src="http://scholarship.ezytech.biz/{{uni_img_path}}" style="height: 100%" class="ui-li-thumb">
                 <h2>{{uni_name}}</h2>
-                <p>Apple released iOS 6.1</p>
-                <p class="ui-li-aside">iOS</p>
+                <p>{{uni_desc}}</p>
+                <p class="ui-li-aside">N/A</p>
             </a></li>
             {{/each}}
         </ul>
