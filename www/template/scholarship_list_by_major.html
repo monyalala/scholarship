@@ -1,0 +1,18 @@
+<div data-role="header" class="headerTitle" data-position="fixed">
+    <a href="./" data-rel="back" class="ui-btn-left ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-shadow ui-corner-all"  data-role="button" role="button" style="margin-top: 5px">Back</a>
+    <h1>អាហារូបករណ៍</h1>
+</div>
+<div role="main" class="ui-content" style="padding:10px">
+    <ul data-role="listview" data-inset="true" style="margin: 5px" id="scholarship-listview" class="university" data-filter="true" data-input="#search-sch">
+        {{#each scholar}}
+        <li onclick="ScholarshipModel.fetchById({{sch_id}},{{uni_id}})">
+            <a href='#page-scholarship-detail' data-transition="slide">
+                <div class="university universityIcon" style="">                
+                </div>
+                <h2>{{sch_name}}</h2>
+                <p>{{uni_name}}</p>
+                <p style="color: brown">{{m_name}}</p>            
+            </a></li>
+        {{/each}}
+    </ul>
+</div>

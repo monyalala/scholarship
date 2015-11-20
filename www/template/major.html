@@ -1,9 +1,9 @@
 <ul data-role="listview" data-inset="true" style="margin: 5px" class="major" data-filter="true" data-input="#search-major">
     {{#each major}}
-    <li data-icon="false">
-        <a href="#">
+    <li data-icon="false" onclick="ScholarshipModel.fetchByMajorId({{m_id}})">
+        <a href="#page-scholarship-by-major">
             <div class="major majorIcon">
-                C
+                {{m_sub_name}}
             </div>
                 <h2>{{m_name}}</h2>
             <p>{{m_desc}}</p>
