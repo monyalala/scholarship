@@ -26,11 +26,11 @@ var UniversityModel = {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-            url: "http://scholarship.ezytech.biz/index.php/mobile/university/getList" + id,  
+            url: "http://scholarship.ezytech.biz/index.php/mobile/university/getList/" + id,  
             crossDomain: true,
             success: function (data) {                
                 UniversityModel.uni_fetch_id = JSON.parse(data);                
-                UniversityView.renderList();
+                UniversityView.renderDetail();
             },
             error: function (error) {
                 console.log('error ; ', error);
