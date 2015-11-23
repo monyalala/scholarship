@@ -27,5 +27,6 @@ function getMap(element,map_latlng) {
             title: "Greetings!"
         });
     }
+    
 }
 
