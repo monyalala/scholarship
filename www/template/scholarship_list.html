@@ -1,6 +1,6 @@
 <ul data-role="listview" data-inset="true" style="margin: 5px" id="scholarship-listview" class="university" data-filter="true" data-input="#search-sch">
     {{#each scholar}}
-    <li onclick="ScholarshipModel.fetchById({{sch_id}},{{uni_id}})">
+    <li data-uni-map="{{uni_map}}" onclick="ScholarshipModel.fetchById({{sch_id}},{{uni_id}})">
         <a href='#page-scholarship-detail' data-transition="slide">
             <div class="university universityIcon" style="">                
             </div>

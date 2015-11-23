@@ -1,16 +1,16 @@
 <div class="my-page" data-url="demo-page">
     <div role="main" class="ui-content">
-        
+
         <ul data-role="listview" data-inset="true" data-filter="true" data-input="#search-university">
             {{#each university}}
             <li onclick="UniversityModel.fetchById({{uni_id}})"><a href="#page-university-detail">
                     <img src="http://scholarship.ezytech.biz/{{uni_img_path}}" style="height: 100%" class="ui-li-thumb">
-                <h2>{{uni_name}}</h2>
-                <p>{{uni_desc}}</p>
-                <p class="ui-li-aside">N/A</p>
-            </a></li>
+                    <h2>{{uni_name}}</h2>
+                    <p>{{uni_desc}}</p>
+                    <p class="ui-li-aside">N/A</p>
+                </a></li>
             {{/each}}
         </ul>
-        
+
     </div>
 </div>

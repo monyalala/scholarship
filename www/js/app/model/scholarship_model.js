@@ -1,8 +1,8 @@
 var ScholarshipModel = {
     scholarships: [],
-    scholarship:[],
-    schByUni:[],
-    schByMajor:[],
+    scholarship: [],
+    schByUni: [],
+    schByMajor: [],
     getScholarships: function () {
         return ScholarshipModel.scholarships;
     },
@@ -19,11 +19,11 @@ var ScholarshipModel = {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getList", 
+            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getList",
 //            url: "http://localhost:81/scholarship/index.php/mobile/scholarship/getList", 
             crossDomain: true,
-            success: function (data) {                
-                ScholarshipModel.scholarships = JSON.parse(data);                
+            success: function (data) {
+                ScholarshipModel.scholarships = JSON.parse(data);
                 ScholarshipView.renderList();
             },
             error: function (error) {
@@ -32,14 +32,14 @@ var ScholarshipModel = {
         });
     }
     ,
-    fetchById: function (id,uni_id) {
+    fetchById: function (id, uni_id) {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getList/"+id, 
+            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getList/" + id,
             crossDomain: true,
-            success: function (data) {                
-                ScholarshipModel.scholarship = JSON.parse(data);                
+            success: function (data) {
+                ScholarshipModel.scholarship = JSON.parse(data);
                 ScholarshipView.renderDetail();
                 RequirementModel.fetchBySchId(id);
                 ScholarshipDetailModel.fetchBySchId(id);
@@ -54,10 +54,10 @@ var ScholarshipModel = {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getListByUni/"+uni_id, 
+            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getListByUni/" + uni_id,
             crossDomain: true,
-            success: function (data) {                
-                ScholarshipModel.schByUni = JSON.parse(data);                
+            success: function (data) {
+                ScholarshipModel.schByUni = JSON.parse(data);
                 ScholarshipView.renderList();
             },
             error: function (error) {
@@ -70,10 +70,10 @@ var ScholarshipModel = {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getListByMajor/"+m_id, 
+            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getListByMajor/" + m_id,
             crossDomain: true,
-            success: function (data) {                
-                ScholarshipModel.schByMajor = JSON.parse(data);                
+            success: function (data) {
+                ScholarshipModel.schByMajor = JSON.parse(data);
                 ScholarshipView.renderListByMajor();
             },
             error: function (error) {

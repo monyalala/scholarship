@@ -1,6 +1,6 @@
-$( document ).on( "pagecreate", "#page-scholarship-detail", function() {
+$(document).on("pagecreate", "#page-scholarship-detail", function () {
     var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
-    if ( navigator.geolocation ) {
+    if (navigator.geolocation) {
         function success(pos) {
             // Location found, show map with these coordinates
             drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
@@ -9,7 +9,7 @@ $( document ).on( "pagecreate", "#page-scholarship-detail", function() {
             drawMap(defaultLatLng);  // Failed to find location, show default map
         }
         // Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
-        navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
+        navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy: true, timeout: 6000});
     } else {
         drawMap(defaultLatLng);  // No geolocation support, show default map
     }

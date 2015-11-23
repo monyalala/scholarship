@@ -7,10 +7,10 @@ var RequirementModel = {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-            url: "http://scholarship.ezytech.biz/index.php/mobile/requirement/getListBySch/"+sch_id,
+            url: "http://scholarship.ezytech.biz/index.php/mobile/requirement/getListBySch/" + sch_id,
             crossDomain: true,
-            success: function (data) {                
-                RequirementModel.requirements = JSON.parse(data);                
+            success: function (data) {
+                RequirementModel.requirements = JSON.parse(data);
                 RequirementView.renderList();
             },
             error: function (error) {

@@ -1,29 +1,17 @@
-
-$(function () {
-//    $("#scholarship-listview").on("click", function(){
-//        console.log("this : ", $(this) );
-//    });
-//    $(document).delegate($("#scholarship-listview li"), "click", function () {
-////        console.log('this : ', $(this))
-//        var id = $("#scholarship-listview li").attr("data-id");
-//        console.log("id : ", id);
-//        ScholarshipModel.fetchById(id);
-//    });
-});
-//function getId(element){
-//    console.log("element : ", $(element).attr("data-id"));
-//    var id = $(element).attr("data-id");
-//    ScholarshipModel.fetchById(id);
-//}
-
 $(function () {
     $("#scholarship-tab").on("click", function () {
         $("#header-title").text("អាហារូបករណ៍");
-        $('.search-class').attr('id','search-sch');
+        $('.search-class').attr('id', 'search-sch');
     });
     $(document).delegate($("#list-scholarships"), "click", function () {
         ScholarshipModel.fetch();
     });
+    
+    $('body').on('click', '#scholarship-listview li', function(){
+        var m_latlng = $(this).attr("data-uni-map");
+        getMap('map-uni-sch',m_latlng);
+    });
+
 });
 
 

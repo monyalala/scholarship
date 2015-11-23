@@ -7,10 +7,10 @@ var ScholarshipDetailModel = {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarshipdetail/getListBySch/"+sch_id, 
+            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarshipdetail/getListBySch/" + sch_id,
             crossDomain: true,
-            success: function (data) {                
-                ScholarshipDetailModel.schDetails = JSON.parse(data);                
+            success: function (data) {
+                ScholarshipDetailModel.schDetails = JSON.parse(data);
                 ScholarshipDetailView.renderList();
             },
             error: function (error) {

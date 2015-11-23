@@ -7,10 +7,10 @@ var ContactModel = {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-            url: "http://scholarship.ezytech.biz/index.php/mobile/contact/getListByUni/"+uni_id,
+            url: "http://scholarship.ezytech.biz/index.php/mobile/contact/getListByUni/" + uni_id,
             crossDomain: true,
-            success: function (data) {                
-                ContactModel.contacts = JSON.parse(data);                
+            success: function (data) {
+                ContactModel.contacts = JSON.parse(data);
                 ContactView.renderListForSch();
             },
             error: function (error) {
