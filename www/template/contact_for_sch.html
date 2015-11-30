@@ -1,6 +1,6 @@
-<div style="padding: 5px;margin-top:5px;font-size: 16px">អាស័យដ្ធានទំនាក់ទំនង</div>
-<div style="padding: 10px">
-    <table class="ui-responsive table-stroke" data-role="table" data-mode="" style="font-size:12px;">     
+<div class="sch-detail-info-title">អាស័យដ្ធានទំនាក់ទំនង</div>
+<div class="sch-detail-info-detail">
+    <table class="ui-responsive table-stroke sch-detail-info-detail-table" data-role="table" data-mode="">     
         <tbody>
             {{#each contact}}
             <tr>
@@ -14,13 +14,11 @@
             </tr>
             <tr>
                 <td style="width:120px">អ៊ីម៉ែល</td>
-<!--                <td>{{c_email}}</td>-->
                 <td><a href="mailto:{{c_email}}">{{c_email}}</a></td>
             </tr>
             <tr>
                 <td>គេហទំព័រ</td>
                 <td>
-                    <!--<a href="{{c_website}}">{{c_website}}</a>--> 
                     <a href="http://{{c_website}}" onclick="window.open('http://'{{c_website}}, '_blank')" target="_blank" rel="external" data-ajax="false">{{c_website}}</a>
                 </td>
             </tr>  

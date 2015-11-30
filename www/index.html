@@ -4,50 +4,96 @@
         <meta charset="UTF-8">
         <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">-->
         <meta name="format-detection" content="telephone=no">
-        <!--<meta name="msapplication-tap-highlight" content="no">-->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
-        <link href="css/card.css" rel="stylesheet" type="text/css"/>
-        <link href="css/libs/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/site.css" rel="stylesheet" type="text/css"/>
-        <link href="css/university.css" rel="stylesheet" type="text/css"/>        
+        <link href="css/libs/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>      
         <script src="js/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
         <script src="js/libs/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <link href="css/master.css" rel="stylesheet" type="text/css"/>
+        <link href="css/libs/normalize.css" rel="stylesheet" type="text/css"/>
+        <script src="js/libs/modernizr.custom.js" type="text/javascript"></script>
         <title>Scholarship</title>
     </head>
     <body>
-        <div data-role="page" id="page-home" class="container">
-            <div data-role="header" class="headerTitle" data-position="fixed">
-                <!--<a onclick="" href="#" class="ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-shadow ui-corner-all" style="margin-top: 5px">Menu</a>-->
-                <a id="search-button" href="#" class="ui-btn-right ui-btn ui-icon-search ui-btn-icon-notext ui-shadow ui-corner-all" style="margin-top: 5px">Search</a>
-                <h1 id="header-title" style="">សាកលវិទ្យាល័យ</h1>
-                <div id="search-container"><input id="search-university" class="search-class" data-type="" data-mini="true" data-role="none" autofocus placeholder="ស្វែងរក"></div>                
-            </div>            
-            <div data-role="tabs" class="headerTab">
-                <div data-role="navbar" class="headerNav" style="">
-                    <ul>                        
-                        <li id="university-tab"><a href="#list-university" data-ajax="false" data-icon="home" class="headerNavLink ui-btn-active">សាកលវិទ្យាល័យ</a></li>
-                        <li id="major-list"><a href="#list-majors" data-ajax="false" data-icon="calendar" class="headerNavLink">ជំនាញ</a></li>
-                        <li id="scholarship-tab"><a href="#list-scholarships" data-ajax="false" data-icon="bullets" class="headerNavLink" >អាហារូបករណ៍</a></li>
+        <div data-role="page" id="page-home">
+            <header class="header-title">
+                <nav class="menu-header">
+                    <h1 id="header-title" class="h1-header toLeft">សាកលវិទ្យាល័យ</h1>
+                    <ul class="toRight menu-header-svg" style="padding: 0; margin: 0;">
+                        <li>
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="50px" height="50px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                            <path d="M296,136c0-22.002-17.998-40-40-40s-40,17.998-40,40s17.998,40,40,40S296,158.002,296,136z M296,376
+                                  c0-22.002-17.998-40-40-40s-40,17.998-40,40s17.998,40,40,40S296,398.002,296,376z M296,256c0-22.002-17.998-40-40-40
+                                  s-40,17.998-40,40s17.998,40,40,40S296,278.002,296,256z"/>
+                            </svg>
+                        </li>
                     </ul>
-                </div>                
-                <div id="list-university" class="ui-content nav-content"></div>
-                <div id="list-majors" class="ui-content nav-content"></div>
-                <div id="list-scholarships" class="ui-content nav-content"></div>
+                </nav>
+            </header>
+            <div class="container">
+                <div id="list-university" class="tab-content current">
+                    <ul data-filter="true" data-input="#search-basic" data-role="listview" data-inset="true" class="university">
+                        <li data-icon="false">
+                            <a href="#">
+                                <div class="university universityIcon">
+                                    <img src="img/beltie_log.png" class="university universityLogo"/>
+                                </div>
+                                <h2>វិទ្យាសាស្ត្រ</h2>
+                                <p>#computer #ITC #IT #Engineering</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="list-majors" class="tab-content"></div>
+                <div id="list-scholarships" class="tab-content"></div>
+                <ul class="tabs">
+                    <li id="university-tab" class="tab-link current" data-tab="list-university">សាកលវិទ្យាល័យ</li>
+                    <li id="major-list" class="tab-link" data-tab="list-majors">មុខជំនាញ</li>
+                    <li id="scholarship-tab" class="tab-link" data-tab="list-scholarships">អាហារូបករណ៍</li>
+                </ul>
             </div>
         </div>
-        <div data-role="page" id="page-scholarship-detail" class="container">
-        </div>
-        <div data-role="page" id="page-university-detail" class="container">
-        </div>
-        <div data-role="page" id="page-scholarship-by-major" class="container">
+        <div data-role="page" id="page-scholarship-detail"></div>
 
-        </div>
+        <!--        <div data-role="page" id="page-home" class="container">
+                    <div data-role="header" class="headerTitle" data-position="fixed">                
+                        <a id="search-button" href="#" class="ui-btn-right ui-btn ui-icon-search ui-btn-icon-notext ui-shadow ui-corner-all" style="margin-top: 5px">Search</a>
+                        <h1 id="header-title" style="">សាកលវិទ្យាល័យ</h1>
+                        <div id="search-container"><input id="search-university" class="search-class" data-type="" data-mini="true" data-role="none" autofocus placeholder="ស្វែងរក"></div>                
+                    </div>            
+                    <div data-role="tabs" class="headerTab">
+                        <div data-role="navbar" class="headerNav" style="">
+                            <ul>                        
+                                <li id="university-tab"><a href="#list-university" data-ajax="false" data-icon="home" class="headerNavLink ui-btn-active">សាកលវិទ្យាល័យ</a></li>
+                                <li id="major-list"><a href="#list-majors" data-ajax="false" data-icon="calendar" class="headerNavLink">ជំនាញ</a></li>
+                                <li id="scho"><a href="#list-scholarships" data-ajax="false" data-icon="bullets" class="headerNavLink" >អាហារូបករណ៍</a></li>
+                            </ul>
+                        </div>                
+                        <div id="list-university" class="ui-content nav-content"></div>
+                        <div id="list-majors" class="ui-content nav-content"></div>
+                        <div id="list-scholarships" class="ui-content nav-content"></div>
+                    </div>
+                </div>-->
+        <!--        <div data-role="page" id="page-scholarship-detail" class="container"></div>
+                <div data-role="page" id="page-university-detail" class="container"></div>
+                <div data-role="page" id="page-scholarship-by-major" class="container"></div>-->
         <script type="text/javascript">
+            $(document).ready(function () {
+                $('ul.tabs li').click(function () {
+                    var tab_id = $(this).attr('data-tab');
+
+                    $('ul.tabs li').removeClass('current');
+                    $('.tab-content').removeClass('current');
+
+                    $(this).addClass('current');
+                    $("#" + tab_id).addClass('current');
+                });
+
+            })
             $(window).load(function () {
                 initialize();
             });
-            
+
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false">
         </script>
@@ -77,26 +123,26 @@
         <script src="js/app/view/university_view.js" type="text/javascript"></script>
         <script type="text/javascript">
             App.onDeviceReady();
-            $(function () {
-                $("#tabs").tabs();
-            });
+            //            $(function () {
+            //                $("#tabs").tabs();
+            //            });
             $(document).on("mobileinit", function () {
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;
             });
-            $(document).on("pagebeforeshow", "#page-home", function () {
-                $("#search-container").hide();
-            });
-            $("#search-button").on("click", function () {
-                $("#search-container").slideToggle("fast");
-                $(".search-class").focus();
-                if ($("#search-container").is(':hidden')) {
-                    $(".search-class").focus();
-                } else {
-                    $(".search-class").val("");
-                    $(".search-class").focus();
-                }
-            });
+            //            $(document).on("pagebeforeshow", "#page-home", function () {
+            //                $("#search-container").hide();
+            //            });
+            //            $("#search-button").on("click", function () {
+            //                $("#search-container").slideToggle("fast");
+            //                $(".search-class").focus();
+            //                if ($("#search-container").is(':hidden')) {
+            //                    $(".search-class").focus();
+            //                } else {
+            //                    $(".search-class").val("");
+            //                    $(".search-class").focus();
+            //                }
+            //            });    
         </script>
     </body>
 </html>
