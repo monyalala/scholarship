@@ -36,13 +36,12 @@ body {
 .headerTab { padding: 0 !important; }
 .headerTitle {
     background: #215399;
-    padding: 0px;    
+    padding: 0px; 
 }
 .headerTitleLink {
     text-shadow: none !important;
     color: #FFFFFF;
 }
-
 
 .headerTitle,
 .headerNavLink {
@@ -173,5 +172,28 @@ body {
     color: #b1b6bc;
     font-weight: lighter;
     text-transform: none;
+}
+#search-container{
+    position: absolute;
+    top:30px;
+    width:100%;
+    padding: 5px;
+    text-align: center;
+}
+.search-class {
+    background-color:transparent;
+    border-width:0px;
+    border-bottom: 2px #0AD2D5 dashed;
+    padding: 3px;
+    color: #FFFFFF;
+    font-size: 14px;
+    width:95%;
+    text-align: center;
+}
+.search-class:focus {
+    outline: 0;
+}
+#mypanel {
+    overflow: hidden;
 }
 

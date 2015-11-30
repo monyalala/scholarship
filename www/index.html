@@ -10,7 +10,7 @@
         <link href="css/card.css" rel="stylesheet" type="text/css"/>
         <link href="css/libs/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/site.css" rel="stylesheet" type="text/css"/>
-        <link href="css/university.css" rel="stylesheet" type="text/css"/>
+        <link href="css/university.css" rel="stylesheet" type="text/css"/>        
         <script src="js/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
         <script src="js/libs/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
         <title>Scholarship</title>
@@ -18,8 +18,10 @@
     <body>
         <div data-role="page" id="page-home" class="container">
             <div data-role="header" class="headerTitle" data-position="fixed">
+                <!--<a onclick="" href="#" class="ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-shadow ui-corner-all" style="margin-top: 5px">Menu</a>-->
                 <a id="search-button" href="#" class="ui-btn-right ui-btn ui-icon-search ui-btn-icon-notext ui-shadow ui-corner-all" style="margin-top: 5px">Search</a>
-                <h1 id="header-title">សាកលវិទ្យាល័យ</h1>                
+                <h1 id="header-title" style="">សាកលវិទ្យាល័យ</h1>
+                <div id="search-container"><input id="search-university" class="search-class" data-type="" data-mini="true" data-role="none" autofocus placeholder="ស្វែងរក"></div>                
             </div>            
             <div data-role="tabs" class="headerTab">
                 <div data-role="navbar" class="headerNav" style="">
@@ -28,12 +30,11 @@
                         <li id="major-list"><a href="#list-majors" data-ajax="false" data-icon="calendar" class="headerNavLink">ជំនាញ</a></li>
                         <li id="scholarship-tab"><a href="#list-scholarships" data-ajax="false" data-icon="bullets" class="headerNavLink" >អាហារូបករណ៍</a></li>
                     </ul>
-                </div>
-                <div id="search-container" style=""><input id="search-university" class="search-class" data-type="search" data-mini="true" ></div>
+                </div>                
                 <div id="list-university" class="ui-content nav-content"></div>
                 <div id="list-majors" class="ui-content nav-content"></div>
                 <div id="list-scholarships" class="ui-content nav-content"></div>
-            </div>            
+            </div>
         </div>
         <div data-role="page" id="page-scholarship-detail" class="container">
         </div>
@@ -46,6 +47,7 @@
             $(window).load(function () {
                 initialize();
             });
+            
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false">
         </script>
@@ -82,11 +84,18 @@
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;
             });
-            $(document).on("pagebeforeshow","#page-home",function(){
+            $(document).on("pagebeforeshow", "#page-home", function () {
                 $("#search-container").hide();
             });
-            $("#search-button").on("click", function(){
+            $("#search-button").on("click", function () {
                 $("#search-container").slideToggle("fast");
+                $(".search-class").focus();
+                if ($("#search-container").is(':hidden')) {
+                    $(".search-class").focus();
+                } else {
+                    $(".search-class").val("");
+                    $(".search-class").focus();
+                }
             });
         </script>
     </body>
