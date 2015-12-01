@@ -387,6 +387,7 @@ ul.tabs li.current {
     text-align: left !important;
     text-transform: none !important;
     padding-top: 5px !important;
+    font-size: 20px !important;
 }
 
 .major li a p {
@@ -527,6 +528,7 @@ ul.tabs li.current {
     text-align: left !important;
     text-transform: none !important;
     padding-top: 5px !important;
+    font-size: 20px !important;
 }
 
 .university li a p {

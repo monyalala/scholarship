@@ -20,9 +20,8 @@ var ScholarshipModel = {
             type: "GET",
             datatype: "JSON",
             url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getList",
-//            url: "http://localhost:81/scholarship/index.php/mobile/scholarship/getList", 
             crossDomain: true,
-            success: function (data) {
+            success: function (data) {                
                 ScholarshipModel.scholarships = JSON.parse(data);
                 ScholarshipView.renderList();
             },
@@ -43,7 +42,7 @@ var ScholarshipModel = {
                 ScholarshipView.renderDetail();
                 RequirementModel.fetchBySchId(id);
                 ScholarshipDetailModel.fetchBySchId(id);
-                ContactModel.fetchByUniIdForSch(uni_id);
+                ContactModel.fetchByUniIdForSch(uni_id);                
             },
             error: function (error) {
                 console.log('error ; ', error);
@@ -53,7 +52,7 @@ var ScholarshipModel = {
     fetchByUniId: function (uni_id) {
         $.ajax({
             type: "GET",
-            datatype: "JSON",
+            datatype: "JSON", 
             url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getListByUni/" + uni_id,
             crossDomain: true,
             success: function (data) {

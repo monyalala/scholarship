@@ -12,6 +12,7 @@ var ContactModel = {
             success: function (data) {
                 ContactModel.contacts = JSON.parse(data);
                 ContactView.renderListForSch();
+                ContactView.renderListForSchMap();
             },
             error: function (error) {
                 console.log('error ; ', error);

@@ -1,33 +1,89 @@
 {{#each univer}}
-<div data-role="header" class="headerTitle" data-position="fixed">
-    <a href="./" data-rel="back" class="ui-btn-left ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-shadow ui-corner-all"  data-role="button" role="button" style="margin-top: 5px">Back</a>
-    <h1>{{uni_name}}</h1>
-</div>
-<!--<div class="card" style="position: absolute;top:145px">-->
-<div role="main" class="ui-content" style="padding:10px">
-    <div class="card">
-        <div style="padding:5px;float:left"><img src="http://scholarship.ezytech.biz/{{uni_logo_path}}" width="50px"></div>
-        <p style="font-size:16px;line-height: 1.25em;">{{uni_name}}</p>
-        <p style="font-size:12px;line-height: 1.25em;margin-top:-10px;color: brown">{{uni_desc}}</p>
-        <div class="card-image">
-            <div id="map-page" data-url="map-page" >
-                <div role="main" class="ui-content" id="map-canvas" style="width: 100%; height: 450px;">                
-
+<header class="header-title">
+    <nav class="menu-header">
+        <h1 id="header-title" class="h1-header toLeft">{{uni_name}}</h1>
+        <ul class="toRight menu-header-svg" style="padding: 0; margin: 0;">
+            <li>
+                <a href="./" data-rel="back" style="margin-top: 5px !important" class="ui-btn-right ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-shadow ui-corner-all"  data-role="button" role="button">Back</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <div style="padding: 10px !important">
+        <div class="sch-detail">
+            <div class="sch-detail sch-detail-cover" style="background-image: url('http://scholarship.ezytech.biz/{{uni_img_path}}');"></div>
+            <!--University Info-->
+            <div class="sch-detail sch-detail-info">
+                <div class="sch-detail-info-title">ពត៌មានសាកលវិទ្យាល័យ</div>
+                <div class="sch-detail-info-detail">
+                    <table class="ui-responsive table-stroke sch-detail-info-detail-table" data-role="table"
+                           data-mode="">
+                        <tbody>
+                            <tr>
+                                <td style="width:120px">សាកលវិទ្យាល័យ</td>
+                                <td>{{uni_name}}</td>
+                            </tr>
+                            <tr>
+                                <td style="width:120px">ឈ្មោះខ្លី</td>
+                                <td>{{uni_shortcut}}</td>
+                            </tr>
+                            <tr>
+                                <td>បន្ថែម</td>
+                                <td>{{uni_desc}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>            
-        </div>    
-        <div id="list-contacts"></div>
-        <!--Scholarship Info-->
-        <div style="padding: 5px;margin-top:5px;font-size: 16px">ពត៌មានអាហារូបករណ៍</div>
-        <div style="padding: 10px">
-            <table class="ui-responsive table-stroke" data-role="table" data-mode="" style="font-size:12px;">     
-                <tbody>
-                    <tr>
-                        <td style="width:120px">សាកលវិទ្យាល័យ</td>
-                    </tr>           
-                </tbody>
-            </table>    
+                <!--Contact Info -->
+                <div id="list-contacts"></div>                
+            </div>
         </div>
+        <div class="btn-share">
+            <ul class="btn-share btn-social">
+                <li>
+                    <a href="#">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="32px" height="32px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <path d="M288,192v-38.1c0-17.2,3.8-25.9,30.5-25.9H352V64h-55.9c-68.5,0-91.1,31.4-91.1,85.3V192h-45v64h45v192h83V256h56.4l7.6-64
+                              H288z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="32px" height="32px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                        <g>
+                        <path d="M408,64H96c-22.002,0-32,17.998-32,40v344l64-64h280c22.002,0,40-17.998,40-40V104C448,81.998,430.002,64,408,64z
+                              M198.4,242H160v-40h38.4V242z M275.2,242h-38.4v-40h38.4V242z M352,242h-38.4v-40H352V242z"/>
+                        </g>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="32px" height="32px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <g>
+                        <polygon points="448,384 448,141.8 316.9,241.6 385,319 383,321 304.1,251.4 256,288 207.9,251.4 129,321 127,319 195,241.6
+                                 64,142 64,384 	"/>
+                        <polygon points="439.7,128 72,128 256,267.9"/>
+                        </g>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--Map-->
+        <div class="sch-detail">
+            <div class="map-box" id="sch-map-page">
+                <div class="map" id="map-uni"></div>
+            </div>   
+            <div id="contact-for-sch-map"></div>
+        </div> 
+        <!--Scholarship list-->
+        <div id="scholarship-list-for-uni"></div>
     </div>
 </div>
 {{/each}}

@@ -31,19 +31,7 @@
                 </nav>
             </header>
             <div class="container">
-                <div id="list-university" class="tab-content current">
-                    <ul data-filter="true" data-input="#search-basic" data-role="listview" data-inset="true" class="university">
-                        <li data-icon="false">
-                            <a href="#">
-                                <div class="university universityIcon">
-                                    <img src="img/beltie_log.png" class="university universityLogo"/>
-                                </div>
-                                <h2>វិទ្យាសាស្ត្រ</h2>
-                                <p>#computer #ITC #IT #Engineering</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <div id="list-university" class="tab-content current"></div>
                 <div id="list-majors" class="tab-content"></div>
                 <div id="list-scholarships" class="tab-content"></div>
                 <ul class="tabs">
@@ -54,6 +42,8 @@
             </div>
         </div>
         <div data-role="page" id="page-scholarship-detail"></div>
+        <div data-role="page" id="page-scholarship-by-major"></div>
+        <div data-role="page" id="page-university-detail"></div>
 
         <!--        <div data-role="page" id="page-home" class="container">
                     <div data-role="header" class="headerTitle" data-position="fixed">                
@@ -123,9 +113,6 @@
         <script src="js/app/view/university_view.js" type="text/javascript"></script>
         <script type="text/javascript">
             App.onDeviceReady();
-            //            $(function () {
-            //                $("#tabs").tabs();
-            //            });
             $(document).on("mobileinit", function () {
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;

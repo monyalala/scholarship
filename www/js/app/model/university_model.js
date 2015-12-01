@@ -31,6 +31,7 @@ var UniversityModel = {
             success: function (data) {
                 UniversityModel.uni_fetch_id = JSON.parse(data);
                 UniversityView.renderDetail();
+                ContactModel.fetchByUniIdForSch(id);
             },
             error: function (error) {
                 console.log('error ; ', error);
