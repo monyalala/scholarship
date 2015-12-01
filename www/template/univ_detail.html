@@ -36,7 +36,7 @@
                     </table>
                 </div>
                 <!--Contact Info -->
-                <div id="list-contacts"></div>                
+                <div class="list-contacts"></div>                
             </div>
         </div>
         <div class="btn-share">
@@ -80,10 +80,16 @@
             <div class="map-box" id="sch-map-page">
                 <div class="map" id="map-uni"></div>
             </div>   
-            <div id="contact-for-sch-map"></div>
+            <div class="contact-for-sch-map"></div>
         </div> 
         <!--Scholarship list-->
-        <div id="scholarship-list-for-uni"></div>
+        <div class="btn-share">
+            <ul class="btn-share btn-social">
+                <li onclick="ScholarshipModel.fetchByUniId({{uni_id}})"> 
+                    <a href="#page-scholarship-by-uni" data-transition="slide">អាហារូបករណ៍</a>
+                </li>                
+            </ul>
+        </div>        
     </div>
 </div>
 {{/each}}

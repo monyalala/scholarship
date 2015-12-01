@@ -43,30 +43,8 @@
         </div>
         <div data-role="page" id="page-scholarship-detail"></div>
         <div data-role="page" id="page-scholarship-by-major"></div>
+        <div data-role="page" id="page-scholarship-by-uni"></div>
         <div data-role="page" id="page-university-detail"></div>
-
-        <!--        <div data-role="page" id="page-home" class="container">
-                    <div data-role="header" class="headerTitle" data-position="fixed">                
-                        <a id="search-button" href="#" class="ui-btn-right ui-btn ui-icon-search ui-btn-icon-notext ui-shadow ui-corner-all" style="margin-top: 5px">Search</a>
-                        <h1 id="header-title" style="">សាកលវិទ្យាល័យ</h1>
-                        <div id="search-container"><input id="search-university" class="search-class" data-type="" data-mini="true" data-role="none" autofocus placeholder="ស្វែងរក"></div>                
-                    </div>            
-                    <div data-role="tabs" class="headerTab">
-                        <div data-role="navbar" class="headerNav" style="">
-                            <ul>                        
-                                <li id="university-tab"><a href="#list-university" data-ajax="false" data-icon="home" class="headerNavLink ui-btn-active">សាកលវិទ្យាល័យ</a></li>
-                                <li id="major-list"><a href="#list-majors" data-ajax="false" data-icon="calendar" class="headerNavLink">ជំនាញ</a></li>
-                                <li id="scho"><a href="#list-scholarships" data-ajax="false" data-icon="bullets" class="headerNavLink" >អាហារូបករណ៍</a></li>
-                            </ul>
-                        </div>                
-                        <div id="list-university" class="ui-content nav-content"></div>
-                        <div id="list-majors" class="ui-content nav-content"></div>
-                        <div id="list-scholarships" class="ui-content nav-content"></div>
-                    </div>
-                </div>-->
-        <!--        <div data-role="page" id="page-scholarship-detail" class="container"></div>
-                <div data-role="page" id="page-university-detail" class="container"></div>
-                <div data-role="page" id="page-scholarship-by-major" class="container"></div>-->
         <script type="text/javascript">
             $(document).ready(function () {
                 $('ul.tabs li').click(function () {
@@ -79,10 +57,10 @@
                     $("#" + tab_id).addClass('current');
                 });
 
-            })
+            });
             $(window).load(function () {
                 initialize();
-            });
+            });            
 
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false">

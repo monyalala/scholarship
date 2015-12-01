@@ -57,7 +57,7 @@ var ScholarshipModel = {
             crossDomain: true,
             success: function (data) {
                 ScholarshipModel.schByUni = JSON.parse(data);
-                ScholarshipView.renderList();
+                ScholarshipView.renderListByUni();
             },
             error: function (error) {
                 console.log('error ; ', error);

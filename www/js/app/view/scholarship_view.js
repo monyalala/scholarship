@@ -19,5 +19,12 @@ var ScholarshipView = {
             $("#page-scholarship-by-major").html(content);
             $("#page-scholarship-by-major").trigger('create');
         });
+    },
+    renderListByUni: function () {
+        var scholar = ScholarshipModel.getSchByUni();
+        AppTemplate.process("scholarship_list_by_uni.html", {scholar: scholar}, function (content) {
+            $("#page-scholarship-by-uni").html(content);
+            $("#page-scholarship-by-uni").trigger('create');
+        });
     }
 };
