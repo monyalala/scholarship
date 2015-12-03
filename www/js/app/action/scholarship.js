@@ -1,7 +1,7 @@
 $(function () {
     console.log("test");
     $("#scholarship-tab").on("click", function () {
-        $("#header-title").text("អាហារូបករណ៍");
+        $(".header-title-h2").text("អាហារូបករណ៍");
         $('.search-class').attr('id', 'search-sch');
     });
     $(document).delegate($("#list-scholarships"), "click", function () {

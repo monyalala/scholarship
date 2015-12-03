@@ -4,7 +4,7 @@ $(function () {
         MajorModel.fetch();
     });
     $("#major-list").on("click", function () {
-        $("#header-title").text("មុខជំនាញ");
+        $(".header-title-h2").text("មុខជំនាញ");
         $('.search-class').attr('id', 'search-major');
     });
 });
