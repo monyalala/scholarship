@@ -231,6 +231,41 @@ footer {
     margin-bottom: 50px !important;
 }
 
+.menu-item-wrapper {
+    text-align: left;
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.menu-item-wrapper ul {
+    list-style: none; 
+    text-align: center; 
+    font-size: 2em;
+}
+.menu-item-wrapper ul li {
+    line-height: 2em;
+    display:block;
+}
+
+.menu-item-wrapper ul li a:link,
+.menu-item-wrapper ul li a:visited {
+    font-weight: 300;
+    color: #fff !important;
+    text-decoration: none !important;
+    -webkit-transition: border-bottom 0.2s, color 0.2s !important;
+    transition: border-bottom 0.2s, color 0.2s !important;
+}
+
+.menu-item-wrapper ul li a:hover,
+.menu-item-wrapper ul li a:active {
+    color: #ff4081 !important;
+}
+
 .menu-header {
     width: 100%;
     height: 50px;
@@ -433,21 +468,8 @@ ul.tabs li.current {
 
 }
 
-.scholar.scholarIcon.scholarIcon1 {
-    background: #2bb5c4 !important;
-}
-.scholar.scholarIcon.scholarIcon2 {
-    background: #aa5422 !important;
-}
-.scholar.scholarIcon.scholarIcon3 {
-    background: #526af3 !important;
-}
-.scholar.scholarIcon.scholarIcon4 {
-    background: #018e3a !important;
-    font-size: 3px;
-}
-.scholar.scholarrIcon.scholarIcon5 {
-    background: #f48d1d !important;
+.scholar.scholarIcon {
+    background: #512da8 !important;
 }
 
 .scholar li a h2,
@@ -511,7 +533,7 @@ ul.tabs li.current {
     color: #fff;
     line-height: 80px;
     font-weight: lighter;
-    background: #4CAF50 !important;
+    background: #512da8 !important;
 }
 .university.universityLogo {
     width: 50px;
@@ -730,4 +752,21 @@ ul.tabs li.current {
     height:250px;
     z-index: 0;
     position: relative;
+}
+
+
+/* ---------------------------------------------- */
+/* Badge Icon */
+/* ---------------------------------------------- */
+.badge {
+  display: block;
+  background: #BA070F;
+  color: #fff;
+  padding: 1px 7px;
+  position: absolute;
+  right: 4px;
+  top: -12px;
+  z-index: 999;
+  border-radius: .8em;
+  border: 2px solid #fff;
 }
