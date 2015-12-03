@@ -21,7 +21,8 @@
         <icon src="www/img/logo.png" density="ldpi" />
         <icon src="www/img/logo.png" density="mdpi" />
         <icon src="www/img/logo.png" density="hdpi" />
-        <icon src="www/img/logo.png" density="xhdpi" />
+        <icon src="www/img/logo.png" density="xhdpi" />     
+        
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
