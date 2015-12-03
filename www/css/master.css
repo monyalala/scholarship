@@ -565,9 +565,30 @@ ul.tabs li.current {
 }
 .sch-detail.sch-detail-cover {
     width: 100%;
-    height: 200px;
+    height: 250px;
     background-size: cover !important;
     background-position: center !important;
+    position: relative;
+}
+.sch-logo-wrapper {
+    position: absolute; top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+    color: #fff; 
+    font-weight: 400;
+}
+.sch-logo {
+    margin: 10px auto !important; 
+    border: 5px solid #fff;  
+    border-radius: 50%; 
+    background: #673ab7; 
+    width: 100px; 
+    height: 100px;
+}
+.sch-logo img {
+    margin: 20px 0 !important;
 }
 
 .sch-detail.sch-detail-info {
