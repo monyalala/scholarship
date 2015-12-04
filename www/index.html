@@ -121,7 +121,7 @@
                     </div>
                     <div class="menu-item-wrapper">
                         <ul>
-                            <li><a href="#">អំពីពួកយើង</a></li>
+                            <li><a href="#page-about-us" data-transition="flip">អំពីពួកយើង</a></li>
                             <!--<li><a href="#" style="line-height: 2em;display:block;">អ្នកបង្កើត</a></li>-->
                             <li><a href="#" onclick="exitFromApp()">ចាកចេញ</a></li>
                         </ul>
@@ -145,6 +145,51 @@
         <div data-role="page" id="page-scholarship-by-major"></div>
         <div data-role="page" id="page-scholarship-by-uni"></div>
         <div data-role="page" id="page-university-detail"></div>
+        <div data-role="page" id="page-about-us" style="background: rgb(67, 38, 119)">
+            <header class="header-title">
+                <nav class="menu-header">
+                    <h1 id="header-title" class="h1-header toLeft">អំពីពួកយើង</h1>
+                    <ul class="toRight menu-header-svg" style="padding: 0; margin: 0;">
+                        <li>
+                            <a href="./" data-rel="back" style="margin-top: 5px !important" class="ui-btn-right ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-shadow ui-corner-all">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <!--<div style="padding: 10px !important">-->
+                <div class="sch-detail-1">
+                    <div class="sch-detail-1 sch-detail-cover" style="background: rgb(67, 38, 119);" >
+                        <div class="sch-logo-wrapper">
+                            <img src="img/mony.jpg" width="50%" style="border-radius: 50%;border: 5px #ffffff solid" />
+                            <p style="font-size: 20px;color: #ff4081">Chhit Chanmony</p>   
+                            <p>Server site developer and coding</p>
+                        </div>
+                    </div>                        
+                </div>
+                <div class="sch-detail-1">
+                    <div class="sch-detail-1 sch-detail-cover" style="background: rgb(67, 38, 119)">
+                        <div class="sch-logo-wrapper">
+                            <img src="img/osp.jpg" width="50%" style="border-radius: 50%;border: 5px #ffffff solid" />
+                            <p style="font-size: 20px;color: #ff4081">Or Sereioarinha</p> 
+                            <p>Layout Design</p>
+                        </div>
+                    </div>                        
+                </div>
+                <div class="sch-detail-1">
+                    <div class="sch-detail-1 sch-detail-cover" style="background: rgb(67, 38, 119)">
+                        <div class="sch-logo-wrapper">
+                            <img src="img/sopheak.jpg" width="50%" style="border-radius: 50%;border: 5px #ffffff solid" />
+                            <p style="font-size: 20px;color: #ff4081">Kheng Sopheak</p>     
+                            <p>Coding</p>
+                        </div>
+                    </div>                        
+                </div>
+                <!--</div>-->
+
+            </div>
+        </div>
         <script type="text/javascript">
             $(document).ready(function () {
                 $('ul.tabs li').click(function () {
@@ -157,8 +202,7 @@
             });
             $(window).load(function () {
                 initialize();
-            });
-        </script>
+            });</script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false">
         </script>
         <script src="js/libs/map.js" type="text/javascript"></script>
