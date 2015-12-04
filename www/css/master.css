@@ -770,3 +770,8 @@ ul.tabs li.current {
   border-radius: .8em;
   border: 2px solid #fff;
 }
+
+
+.search-box {
+    padding-left: 30px !important;
+}
