@@ -11,7 +11,6 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-splashscreen"
-
         },
         "is_top_level": true,
         "variables": {}
@@ -22,7 +21,22 @@
             "id": "cordova-plugin-x-socialsharing"
         },
         "is_top_level": true,
-
+        "variables": {}
+    },
+    "com.pushbots.push": {
+        "source": {
+            "type": "registry",
+            "id": "com.pushbots.push"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "android.support.v4": {
+        "source": {
+            "type": "registry",
+            "id": "android.support.v4"
+        },
+        "is_top_level": false,
         "variables": {}
     }
 }
