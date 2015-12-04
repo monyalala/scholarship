@@ -6,6 +6,7 @@ var App = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     onDeviceReady: function () {
+    	PushbotsPlugin.initialize("5660536f17795926588b4567");
         UniversityModel.fetch();
     }
 };
