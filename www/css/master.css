@@ -286,10 +286,9 @@ footer {
     height: 40px;
     width: 40px;
 }
-
 .menu-header ul li svg {
     width: 30px;
-    margin: 0 auto;
+    margin: 0 10px;
     fill: #fff;
 }
 
