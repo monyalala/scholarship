@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <!--
 <input id="myFilter" data-type="search" placeholder="ស្វែងរកសកលវិទ្យាល័យ" style="padding: 0 !important; padding-left: 30px !important;" />
 -->
+=======
+<!--<input id="myFilter" data-type="search" placeholder="ស្វែងរកសកលវិទ្យាល័យ" style="padding: 0 !important; padding-left: 30px !important;" />-->
+>>>>>>> 02f9d17257430559b4f43c2f69eee5420a7e1146
 <ul data-role="listview" data-filter="true" data-input="#myFilter" class="university" style="margin-top: 20px !important;">
     {{#each university}}
     <li data-icon="false" data-uni-map="{{uni_map}}" onclick="UniversityModel.fetchById({{uni_id}})">
@@ -9,7 +13,7 @@
                 <img src="http://scholarship.ezytech.biz/{{uni_logo_path}}" class="university universityLogo"/>
             </div>
             <h2>{{uni_name}}</h2>
-            <p>{{uni_shortcut}} ({{num_of_sch}})</p>
+            <p>ចំនួនអាហារូបករណ៍ <b> ({{num_of_sch}})</b></p>
         </a>
     </li>
     {{/each}}
