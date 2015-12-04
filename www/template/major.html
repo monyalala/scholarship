@@ -2,9 +2,7 @@
     {{#each major}}
     <li data-icon="false" onclick="ScholarshipModel.fetchByMajorId({{m_id}})">
         <a href="#page-scholarship-by-major"  data-transition="slide">
-            <div class="major majorIcon majorIcon1">
-                {{m_sub_name}}
-            </div>
+            <div class="scholar scholarIcon"></div>
             <h2>{{m_name}}</h2>
             <p>{{m_desc}} ({{num_of_sch}})</p>
         </a>
