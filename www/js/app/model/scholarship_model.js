@@ -35,14 +35,15 @@ var ScholarshipModel = {
         $.ajax({
             type: "GET",
             datatype: "JSON",
-            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getList/" + id,
+//            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getList/" + id,
+            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/getListJoinById/" + id + "/" + uni_id,
             crossDomain: true,
             success: function (data) {
-                ScholarshipModel.scholarship = JSON.parse(data);
+                ScholarshipModel.scholarship = JSON.parse(data);                
                 ScholarshipView.renderDetail();
-                RequirementModel.fetchBySchId(id);
-                ScholarshipDetailModel.fetchBySchId(id);
-                ContactModel.fetchByUniIdForSch(uni_id);                
+//                RequirementModel.fetchBySchId(id);
+//                ScholarshipDetailModel.fetchBySchId(id);
+//                ContactModel.fetchByUniIdForSch(uni_id);                
             },
             error: function (error) {
                 console.log('error ; ', error);

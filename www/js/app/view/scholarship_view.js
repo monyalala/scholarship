@@ -7,8 +7,8 @@ var ScholarshipView = {
         });
     },
     renderDetail: function () {
-        var scholar = ScholarshipModel.getScholarship();
-        AppTemplate.process("scholarship_detail.html", {scholar: scholar}, function (content) {
+        var scholar = ScholarshipModel.getScholarship(); 
+        AppTemplate.process("scholarship_detail.html", {scholar:scholar}, function (content) {
             $("#page-scholarship-detail").html(content);
             $("#page-scholarship-detail").trigger('create');
         });
