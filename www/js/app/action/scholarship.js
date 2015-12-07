@@ -1,5 +1,4 @@
 $(function () {
-    console.log("test");
     $("#scholarship-tab").on("click", function () {
         $(".header-title-h2").text("អាហារូបករណ៍");
         $('.search-class').attr('id', 'search-sch');

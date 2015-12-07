@@ -7,7 +7,7 @@ var App = {
     },
     onDeviceReady: function () {
         UniversityModel.fetch();
-    	PushbotsPlugin.initialize("5660536f17795926588b4567");        
+    	//PushbotsPlugin.initialize("5660536f17795926588b4567");        
     }
 };
 
