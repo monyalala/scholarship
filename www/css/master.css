@@ -10,8 +10,8 @@ color-blue:hover : #7474BF
 
 * {
      margin: 0 !important; 
-    /* padding: 0 !important; */
-    /* box-sizing: border-box !important; */
+     padding: 0 !important; 
+     box-sizing: border-box !important; 
 }
 
 html,
