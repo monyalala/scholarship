@@ -11,6 +11,10 @@ $(function () {
         var m_latlng = $(this).attr("data-uni-map");
         getMap('map-uni-sch',m_latlng);
     });
+    $('#search-all').on('keyup',function(){
+        var search = $('#search-all').val();
+        ScholarshipModel.fetchSearch(search);
+    });
 });
 
 

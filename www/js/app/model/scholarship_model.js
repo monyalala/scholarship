@@ -3,6 +3,7 @@ var ScholarshipModel = {
     scholarship: [],
     schByUni: [],
     schByMajor: [],
+    schBySearchs: [],
     getScholarships: function () {
         return ScholarshipModel.scholarships;
     },
@@ -14,6 +15,9 @@ var ScholarshipModel = {
     },
     getSchByMajor: function () {
         return ScholarshipModel.schByMajor;
+    },
+    getSchBySearch: function () {
+        return ScholarshipModel.schBySearchs;
     },
     fetch: function () {
         $.ajax({
@@ -75,6 +79,21 @@ var ScholarshipModel = {
             success: function (data) {
                 ScholarshipModel.schByMajor = JSON.parse(data);
                 ScholarshipView.renderListByMajor();
+            },
+            error: function (error) {
+                console.log('error ; ', error);
+            }
+        });
+    },
+    fetchSearch: function (search) {
+        $.ajax({
+            type: "GET",
+            datatype: "JSON", 
+            url: "http://scholarship.ezytech.biz/index.php/mobile/scholarship/search/" + search,
+            crossDomain: true,
+            success: function (data) {
+                ScholarshipModel.schBySearchs = JSON.parse(data);
+                ScholarshipView.renderListBySearch();
             },
             error: function (error) {
                 console.log('error ; ', error);

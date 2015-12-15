@@ -1,4 +1,4 @@
-<ul data-role="listview" data-filter="true" data-input="#search-university" class="university" style="">
+<ul data-role="listview" data-filter="true" data-input="#search-university" class="university" style="" id="university-listview">
     {{#each university}}
     <li data-icon="false" data-uni-map="{{uni_map}}" onclick="UniversityModel.fetchById({{uni_id}})">
         <a href="#page-university-detail" data-transition="slide">
