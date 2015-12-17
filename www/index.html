@@ -9,13 +9,6 @@
         <link href="css/libs/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
         <script src="js/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
         <script src="js/libs/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
-        <script src="js/libs/persistencejs/persistence.js" type="text/javascript"></script>
-        <script src="js/libs/persistencejs/persistence.jquery.js" type="text/javascript"></script>
-        <script src="js/libs/persistencejs/persistence.store.sql.js" type="text/javascript"></script>
-        <script src="js/libs/persistencejs/persistence.store.websql.js" type="text/javascript"></script>
-        <script src="js/libs/persistencejs/persistence.sync.js" type="text/javascript"></script>        
-        <script src="js/core/db_connection.js" type="text/javascript"></script>
-        <script src="js/core/table.js" type="text/javascript"></script>
         <link href="css/libs/normalize.css" rel="stylesheet" type="text/css"/>
         <link href="css/libs/jquery.dropdown.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/master.css" rel="stylesheet" type="text/css"/>
@@ -43,18 +36,18 @@
                         </li>
                     </ul>
                     <h1 class="header-title h1-header toLeft">CAM SCHOLARSHIP</h1>
-<!--                    <ul class="toRight menu-header-svg" style="padding: 0; margin: 0;">
-                        <li>
-                            <a data-transition="slide" href="#page-home" style="margin-top: 5px !important" class="ui-btn-right ui-btn ui-icon-arrow-r ui-btn-icon-notext ui-shadow ui-corner-all">
-                            </a>
-                        </li>
-                    </ul>-->
+                    <!--                    <ul class="toRight menu-header-svg" style="padding: 0; margin: 0;">
+                                            <li>
+                                                <a data-transition="slide" href="#page-home" style="margin-top: 5px !important" class="ui-btn-right ui-btn ui-icon-arrow-r ui-btn-icon-notext ui-shadow ui-corner-all">
+                                                </a>
+                                            </li>
+                                        </ul>-->
                 </nav>
             </header>   
             <div class="container"> 
-<!--                <div style="padding: 10px !important;font-size: 18px;font-weight: none;color:rgb(67, 38, 119) ">
-                    SEARCH
-                </div>                -->
+                <!--                <div style="padding: 10px !important;font-size: 18px;font-weight: none;color:rgb(67, 38, 119) ">
+                                    SEARCH
+                                </div>                -->
                 <div style="padding:15px !important">
                     <input type="text" data-mini="true" data-inset="true" id="search-all" placeholder="ស្វែងរក">                 
                 </div>
@@ -211,39 +204,26 @@
         <script src="js/app/view/university_view.js" type="text/javascript"></script>
         <script src="js/app/model/majoroffline_model.js" type="text/javascript"></script>
         <script type="text/javascript">
-                                        App.onDeviceReady();
-                                        $(window).load(function () {
-                                App.initialize();
+                                App.onDeviceReady();
+                                $(window).load(function () {
+                                    App.initialize();
                                 });
-                                        $(document).on("mobileinit", function () {
-                                $.support.cors = true;
-                                        $.mobile.allowCrossDomainPages = true;
+                                $(document).on("mobileinit", function () {
+                                    $.support.cors = true;
+                                    $.mobile.allowCrossDomainPages = true;
                                 });
-                                        function exitFromApp() {
-                                        navigator.app.exitApp();
-                                        }
+                                function exitFromApp() {
+                                    navigator.app.exitApp();
+                                }
                                 $(document).ready(function () {
-                                $('ul.tabs li').click(function () {
-                                var tab_id = $(this).attr('data-tab');
+                                    $('ul.tabs li').click(function () {
+                                        var tab_id = $(this).attr('data-tab');
                                         $('ul.tabs li').removeClass('current');
                                         $('.tab-content').removeClass('current');
                                         $(this).addClass('current');
                                         $("#" + tab_id).addClass('current');
+                                    });
                                 });
-                                });
-//            $(document).on("pagebeforeshow", "#page-home", function () {
-//                $("#search-container").hide();
-//            });
-//            $("#search-button").on("click", function () {
-//                $("#search-container").slideToggle("fast");
-//                $(".search-class").focus();
-//                if ($("#search-container").is(':hidden')) {
-//                    $(".search-class").focus();
-//                } else {
-//                    $(".search-class").val("");
-//                    $(".search-class").focus();
-//                }
-//            });
         </script>
     </body>
 </html>

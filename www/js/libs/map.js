@@ -1,3 +1,5 @@
+/* global google */
+
 function getMap(element,map_latlng) {
     var split_latlng = map_latlng.split(",");
     var lat = split_latlng[0];
