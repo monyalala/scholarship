@@ -121,11 +121,15 @@
                 </div>-->
         <!--Scholarship list-->
         <div class="btn-share">
-            <ul class="btn-share btn-social">
-                <li onclick="ScholarshipModel.fetchByUniId({{uni_id}})"> 
-                    <a href="#page-scholarship-by-uni" data-transition="slide">អាហារូបករណ៍</a>
-                </li>                
-            </ul>
+            <a href="#page-scholarship-by-uni" data-transition="slide">
+                <ul class="btn-share btn-social">
+                    <li onclick="ScholarshipModel.fetchByUniId({{uni_id}})" style="color:white"> 
+                        <!--<a href="#page-scholarship-by-uni" data-transition="slide">-->
+                        អាហារូបករណ៍
+                        <!--</a>-->
+                    </li>
+                </ul>
+            </a>
         </div>   
         <!--Map-->
         <div class="sch-detail">
