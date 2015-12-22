@@ -9,8 +9,9 @@ var UniversityView = {
     renderDetail: function () {
         var univers = UniversityModel.getUniversityByID();
         AppTemplate.process("univ_detail.html", {univer: univers}, function (content) {
-            $("#page-university-detail").html(content);
+            $("#page-university-detail").html(content);            
             $("#page-university-detail").trigger('create');
+            getMap('map-uni',univers.uni[0].uni_map);            
         });
     }
 };

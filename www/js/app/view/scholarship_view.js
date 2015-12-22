@@ -11,6 +11,7 @@ var ScholarshipView = {
         AppTemplate.process("scholarship_detail.html", {scholar:scholar}, function (content) {
             $("#page-scholarship-detail").html(content);
             $("#page-scholarship-detail").trigger('create');
+            getMap('map-uni-sch',scholar.sch[0].uni_map);
         });
     },
     renderListByMajor: function () {
