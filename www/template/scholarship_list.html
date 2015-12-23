@@ -2,10 +2,13 @@
     {{#each scholar}}
     <li data-icon="false" onclick="ScholarshipModel.fetchById({{sch_id}},{{uni_id}})">
         <a href='#page-scholarship-detail' data-transition="slide">
-            <div class="scholar scholarIcon"></div>
+            <div class="scholar scholarIcon">
+                
+            </div>
             <h2>{{sch_name}}</h2>
             <p>{{uni_name}}</p>
             <p style="color: brown">{{m_name}}</p>            
-        </a></li>
+        </a>
+    </li>
     {{/each}}
 </ul>

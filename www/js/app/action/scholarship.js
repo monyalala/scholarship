@@ -12,6 +12,9 @@ $(function () {
     });    
 
 });
+function set_favourite() {
+    alert("set favourit");
+}
 
 
 
